@@ -30,6 +30,7 @@ router.beforeEach(async (to) => {
   const auth = useAuthStore();
   if (!['/login', '/register'].includes(to.path) && !auth.token) return '/login';
   if (auth.token && !auth.user) await auth.refreshMe();
-  if (to.path.startsWith('/admin') && !['admin','activityAdmin','reviewer'].includes(auth.user?.role)) return '/403';
+  const role = auth.user?.role || '';
+  if (to.path.startsWith('/admin') && !['admin', 'activityAdmin', 'reviewer'].includes(role)) return '/403';
 });
 export default router;

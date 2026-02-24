@@ -1,0 +1,70 @@
+{
+  "layout": {
+    "student": "学生端",
+    "admin": "管理端",
+    "dashboard": "首页",
+    "activities": "活动列表",
+    "myEnrollments": "我的报名",
+    "mySubmissions": "我的提交",
+    "myPoints": "我的积分",
+    "logout": "退出",
+    "switchToEnglish": "English",
+    "switchToChinese": "中文",
+    "overview": "看板",
+    "manageActivities": "活动管理",
+    "reviewSubmissions": "材料审核",
+    "exportCenter": "导出中心",
+    "rolesCenter": "权限管理",
+    "messageCenter": "消息中心"
+  },
+  "common": {
+    "status": "状态",
+    "activity": "活动",
+    "submit": "提交",
+    "register": "注册",
+    "login": "登录",
+    "details": "详情",
+    "search": "查询"
+  },
+  "login": {
+    "studentId": "学号",
+    "password": "密码",
+    "failed": "登录失败"
+  },
+  "register": {
+    "name": "姓名",
+    "grade": "年级",
+    "college": "学院",
+    "success": "注册成功",
+    "failed": "注册失败"
+  },
+  "activity": {
+    "keyword": "搜索",
+    "type": "类型",
+    "allStatus": "全部状态",
+    "draft": "草稿",
+    "published": "已发布",
+    "closed": "已关闭",
+    "createdAt": "发布时间",
+    "signupDeadline": "报名截止",
+    "capacity": "容量",
+    "desc": "降序",
+    "asc": "升序",
+    "title": "标题",
+    "tags": "标签",
+    "remaining": "剩余",
+    "empty": "暂无活动",
+    "loadFailed": "活动加载失败，请稍后重试",
+    "remainingQuota": "剩余名额",
+    "countdown": "报名截止倒计时",
+    "expired": "已截止",
+    "enroll": "报名",
+    "cancelEnroll": "取消报名",
+    "submitMaterial": "提交材料",
+    "enrollSuccess": "报名成功",
+    "cancelSuccess": "已取消",
+    "submitSuccess": "提交成功",
+    "failed": "失败",
+    "frontendNote": "前端提交"
+  }
+}
