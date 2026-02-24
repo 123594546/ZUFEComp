@@ -7,6 +7,7 @@ import { db } from '../db.js';
 import { auth, requireRole } from '../middleware/auth.js';
 import { now } from '../utils/helpers.js';
 import { evaluateSubmission } from '../utils/ai.js';
+import { awardPointsOnce } from '../utils/points.js';
 
 const uploadDir = path.resolve(process.cwd(), process.env.UPLOAD_DIR || '../../uploads');
 fs.mkdirSync(uploadDir, { recursive: true });
@@ -28,6 +29,7 @@ router.post('/activities/:id/submissions', requireRole('student'), upload.single
   });
   const submission = { id: nanoid(), activityId: req.params.id, userId: req.user!.id, fileName: req.file.originalname, filePath: req.file.path, mimeType: req.file.mimetype, note: (req.body.note as string) || '', status: 'pending' as const, aiReview, createdAt: now(), updatedAt: now() };
   db.data.submissions.push(submission);
+  awardPointsOnce({ userId: req.user!.id, type: 'submission', refId: submission.id, points: 10, note: `提交材料：${act.title}` });
   await db.write();
   res.json({ success: true, data: submission });
 });

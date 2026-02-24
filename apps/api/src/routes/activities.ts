@@ -3,6 +3,7 @@ import { nanoid } from 'nanoid';
 import { db } from '../db.js';
 import { auth, requireRole } from '../middleware/auth.js';
 import { calcRemaining, now } from '../utils/helpers.js';
+import { awardPointsOnce } from '../utils/points.js';
 
 const router = Router();
 router.use(auth);
@@ -74,6 +75,7 @@ router.post('/:id/enroll', requireRole('student'), async (req, res) => {
   const ex = db.data.enrollments.find((e) => e.activityId === act.id && e.userId === req.user!.id);
   if (ex) { ex.status = 'enrolled'; ex.updatedAt = now(); }
   else db.data.enrollments.push({ id: nanoid(), activityId: act.id, userId: req.user!.id, status: 'enrolled', createdAt: now(), updatedAt: now() });
+  awardPointsOnce({ userId: req.user!.id, type: 'enrollment', refId: act.id, points: 5, note: `报名活动：${act.title}` });
   await db.write();
   res.json({ success: true });
 });

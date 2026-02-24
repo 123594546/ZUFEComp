@@ -6,9 +6,9 @@ export const seedIfEmpty = async () => {
   if (db.data.users.length || db.data.activities.length) return;
   const hash = await bcrypt.hash('123456', 10);
   db.data.users = [
-    { id: 'u_admin', studentId: 'admin001', name: '系统管理员', grade: '教师', college: '信息管理学院', role: 'admin', passwordHash: hash, createdAt: new Date().toISOString() },
-    { id: 'u_stu1', studentId: '20230001', name: '张三', grade: '2023', college: '财政税务学院', role: 'student', passwordHash: hash, createdAt: new Date().toISOString() },
-    { id: 'u_stu2', studentId: '20230002', name: '李四', grade: '2023', college: '会计学院', role: 'student', passwordHash: hash, createdAt: new Date().toISOString() }
+    { id: 'u_admin', studentId: 'admin001', name: '系统管理员', grade: '教师', college: '信息管理学院', role: 'admin', points: 0, passwordHash: hash, createdAt: new Date().toISOString() },
+    { id: 'u_stu1', studentId: '20230001', name: '张三', grade: '2023', college: '财政税务学院', role: 'student', points: 0, passwordHash: hash, createdAt: new Date().toISOString() },
+    { id: 'u_stu2', studentId: '20230002', name: '李四', grade: '2023', college: '会计学院', role: 'student', points: 0, passwordHash: hash, createdAt: new Date().toISOString() }
   ];
   const types = ['志愿服务', '学科竞赛', '讲座论坛', '创新创业'];
   db.data.activities = Array.from({ length: 10 }).map((_, i) => ({
@@ -27,5 +27,6 @@ export const seedIfEmpty = async () => {
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString()
   }));
+  db.data.pointsLedger = [];
   await db.write();
 };

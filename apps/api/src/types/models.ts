@@ -7,7 +7,18 @@ export interface User {
   grade: string;
   college: string;
   role: Role;
+  points: number;
   passwordHash: string;
+  createdAt: string;
+}
+
+export interface PointsLedger {
+  id: string;
+  userId: string;
+  type: 'enrollment' | 'submission' | 'submissionApproved';
+  refId: string;
+  points: number;
+  note: string;
   createdAt: string;
 }
 
@@ -62,4 +73,5 @@ export interface DBSchema {
   activities: Activity[];
   enrollments: Enrollment[];
   submissions: Submission[];
+  pointsLedger: PointsLedger[];
 }

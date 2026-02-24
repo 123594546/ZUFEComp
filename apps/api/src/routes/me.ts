@@ -32,4 +32,13 @@ router.get('/submissions', requireRole('student'), async (req, res) => {
   res.json({ success: true, data: list });
 });
 
+router.get('/points', requireRole('student'), async (req, res) => {
+  await db.read();
+  const user = db.data.users.find((item) => item.id === req.user!.id);
+  const ledger = db.data.pointsLedger
+    .filter((item) => item.userId === req.user!.id)
+    .sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
+  res.json({ success: true, data: { points: user?.points || 0, ledger } });
+});
+
 export default router;

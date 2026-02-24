@@ -11,7 +11,8 @@ const routes = [
     { path: 'activities', component: () => import('../pages/student/Activities.vue') },
     { path: 'activities/:id', component: () => import('../pages/student/ActivityDetail.vue') },
     { path: 'me/enrollments', component: () => import('../pages/student/MyEnrollments.vue') },
-    { path: 'me/submissions', component: () => import('../pages/student/MySubmissions.vue') }
+    { path: 'me/submissions', component: () => import('../pages/student/MySubmissions.vue') },
+    { path: 'me/points', component: () => import('../pages/student/MyPoints.vue') }
   ]},
   { path: '/admin', component: () => import('../layouts/AdminLayout.vue'), children: [
     { path: 'overview', component: () => import('../pages/admin/Overview.vue') },

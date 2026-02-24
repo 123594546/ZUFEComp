@@ -29,7 +29,8 @@ describe('smoke api', () => {
   it('get activities', async () => {
     const r = await request(app).get('/api/activities').set('Authorization', `Bearer ${studentToken}`);
     expect(r.body.success).toBeTruthy();
-    activityId = r.body.data[0].id;
+    const enrollable = r.body.data.find((item: { status: string; signupDeadline: string; remaining: number }) => item.status === 'published' && new Date(item.signupDeadline).getTime() > Date.now() && item.remaining > 0);
+    activityId = enrollable?.id || r.body.data[0].id;
   });
   it('enroll', async () => {
     const r = await request(app).post(`/api/activities/${activityId}/enroll`).set('Authorization', `Bearer ${studentToken}`);
@@ -43,5 +44,13 @@ describe('smoke api', () => {
     submissionId = s.body.data.id;
     const r = await request(app).patch(`/api/admin/submissions/${submissionId}/review`).set('Authorization', `Bearer ${adminToken}`).send({ status: 'approved', reviewNote: 'ok' });
     expect(r.status).toBe(200);
+
+    const points = await request(app).get('/api/me/points').set('Authorization', `Bearer ${studentToken}`);
+    expect(points.status).toBe(200);
+    const ledgerTypes = points.body.data.ledger.map((item: { type: string }) => item.type);
+    expect(points.body.data.points).toBeGreaterThanOrEqual(35);
+    expect(ledgerTypes).toContain('enrollment');
+    expect(ledgerTypes).toContain('submission');
+    expect(ledgerTypes).toContain('submissionApproved');
   });
 });
