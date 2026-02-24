@@ -18,7 +18,9 @@ const routes = [
     { path: 'overview', component: () => import('../pages/admin/Overview.vue') },
     { path: 'activities', component: () => import('../pages/admin/ActivitiesManage.vue') },
     { path: 'submissions', component: () => import('../pages/admin/SubmissionsReview.vue') },
-    { path: 'export', component: () => import('../pages/admin/ExportCenter.vue') }
+    { path: 'export', component: () => import('../pages/admin/ExportCenter.vue') },
+    { path: 'roles', component: () => import('../pages/admin/RolesManage.vue') },
+    { path: 'messages', component: () => import('../pages/admin/MessagesCenter.vue') }
   ]},
   { path: '/:pathMatch(.*)*', component: () => import('../pages/common/NotFound.vue') }
 ];
@@ -28,6 +30,6 @@ router.beforeEach(async (to) => {
   const auth = useAuthStore();
   if (!['/login', '/register'].includes(to.path) && !auth.token) return '/login';
   if (auth.token && !auth.user) await auth.refreshMe();
-  if (to.path.startsWith('/admin') && auth.user?.role !== 'admin') return '/403';
+  if (to.path.startsWith('/admin') && !['admin','activityAdmin','reviewer'].includes(auth.user?.role)) return '/403';
 });
 export default router;

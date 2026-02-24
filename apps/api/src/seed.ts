@@ -6,7 +6,9 @@ export const seedIfEmpty = async () => {
   if (db.data.users.length || db.data.activities.length) return;
   const hash = await bcrypt.hash('123456', 10);
   db.data.users = [
-    { id: 'u_admin', studentId: 'admin001', name: '系统管理员', grade: '教师', college: '信息管理学院', role: 'admin', points: 0, passwordHash: hash, createdAt: new Date().toISOString() },
+    { id: 'u_admin', studentId: 'admin001', name: '系统管理员', grade: '教师', college: '信息管理学院', role: 'admin', permissions: {}, points: 0, passwordHash: hash, createdAt: new Date().toISOString() },
+    { id: 'u_act_admin', studentId: 'admin002', name: '活动管理员', grade: '教师', college: '信息管理学院', role: 'activityAdmin', permissions: { manageActivityTypes: ['志愿服务', '讲座论坛'], manageableStatuses: ['draft', 'published'] }, points: 0, passwordHash: hash, createdAt: new Date().toISOString() },
+    { id: 'u_reviewer', studentId: 'admin003', name: '审核员', grade: '教师', college: '信息管理学院', role: 'reviewer', permissions: {}, points: 0, passwordHash: hash, createdAt: new Date().toISOString() },
     { id: 'u_stu1', studentId: '20230001', name: '张三', grade: '2023', college: '财政税务学院', role: 'student', points: 0, passwordHash: hash, createdAt: new Date().toISOString() },
     { id: 'u_stu2', studentId: '20230002', name: '李四', grade: '2023', college: '会计学院', role: 'student', points: 0, passwordHash: hash, createdAt: new Date().toISOString() }
   ];
@@ -28,5 +30,6 @@ export const seedIfEmpty = async () => {
     updatedAt: new Date().toISOString()
   }));
   db.data.pointsLedger = [];
+  db.data.notifications = [];
   await db.write();
 };

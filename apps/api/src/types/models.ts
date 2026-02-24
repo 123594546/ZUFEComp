@@ -1,4 +1,4 @@
-export type Role = 'student' | 'admin';
+export type Role = 'student' | 'admin' | 'activityAdmin' | 'reviewer';
 
 export interface User {
   id: string;
@@ -7,8 +7,22 @@ export interface User {
   grade: string;
   college: string;
   role: Role;
+  permissions?: {
+    manageActivityTypes?: string[];
+    manageableStatuses?: Array<'draft' | 'published' | 'closed'>;
+  };
   points: number;
   passwordHash: string;
+  createdAt: string;
+}
+
+export interface Notification {
+  id: string;
+  userId: string;
+  title: string;
+  content: string;
+  type: 'submission_created' | 'submission_reviewed' | 'system';
+  read: boolean;
   createdAt: string;
 }
 
@@ -63,6 +77,7 @@ export interface Submission {
     score: number;
     result: 'pass' | 'warn';
     reasons: string[];
+    ocrText?: string;
   };
   createdAt: string;
   updatedAt: string;
@@ -74,4 +89,5 @@ export interface DBSchema {
   enrollments: Enrollment[];
   submissions: Submission[];
   pointsLedger: PointsLedger[];
+  notifications: Notification[];
 }

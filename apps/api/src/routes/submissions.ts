@@ -29,6 +29,11 @@ router.post('/activities/:id/submissions', requireRole('student'), upload.single
   });
   const submission = { id: nanoid(), activityId: req.params.id, userId: req.user!.id, fileName: req.file.originalname, filePath: req.file.path, mimeType: req.file.mimetype, note: (req.body.note as string) || '', status: 'pending' as const, aiReview, createdAt: now(), updatedAt: now() };
   db.data.submissions.push(submission);
+  db.data.users
+    .filter((u) => u.role === 'admin' || u.role === 'reviewer')
+    .forEach((admin) => {
+      db.data.notifications.push({ id: nanoid(), userId: admin.id, title: '有新的材料待审核', content: `活动 ${act.title} 收到新的学生材料：${req.file?.originalname || ''}`, type: 'submission_created', read: false, createdAt: now() });
+    });
   awardPointsOnce({ userId: req.user!.id, type: 'submission', refId: submission.id, points: 10, note: `提交材料：${act.title}` });
   await db.write();
   res.json({ success: true, data: submission });
