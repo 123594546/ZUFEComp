@@ -1,0 +1,15 @@
+{
+  "name": "zufecomp",
+  "private": true,
+  "version": "1.0.0",
+  "packageManager": "pnpm@9.12.3",
+  "scripts": {
+    "dev": "concurrently -n api,web -c cyan,magenta \"pnpm --filter @zufecomp/api dev\" \"pnpm --filter @zufecomp/web dev\"",
+    "build": "pnpm --filter @zufecomp/web build",
+    "lint": "pnpm -r lint",
+    "test": "pnpm --filter @zufecomp/api test"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  }
+}
