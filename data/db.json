@@ -1,7 +1,277 @@
 {
-  "users": [],
-  "activities": [],
+  "users": [
+    {
+      "id": "u_admin",
+      "studentId": "admin001",
+      "name": "系统管理员",
+      "grade": "教师",
+      "college": "信息管理学院",
+      "role": "admin",
+      "permissions": {},
+      "points": 0,
+      "passwordHash": "$2a$10$9v4Mje5/mfkDIUq0NY3WTOMQouyCPUNv.D/PMZWMJQup.y4/zbhmq",
+      "createdAt": "2026-02-24T16:32:26.800Z"
+    },
+    {
+      "id": "u_act_admin",
+      "studentId": "admin002",
+      "name": "活动管理员",
+      "grade": "教师",
+      "college": "信息管理学院",
+      "role": "activityAdmin",
+      "permissions": {
+        "manageActivityTypes": [
+          "志愿服务",
+          "讲座论坛"
+        ],
+        "manageableStatuses": [
+          "draft",
+          "published"
+        ]
+      },
+      "points": 0,
+      "passwordHash": "$2a$10$9v4Mje5/mfkDIUq0NY3WTOMQouyCPUNv.D/PMZWMJQup.y4/zbhmq",
+      "createdAt": "2026-02-24T16:32:26.802Z"
+    },
+    {
+      "id": "u_reviewer",
+      "studentId": "admin003",
+      "name": "审核员",
+      "grade": "教师",
+      "college": "信息管理学院",
+      "role": "reviewer",
+      "permissions": {},
+      "points": 0,
+      "passwordHash": "$2a$10$9v4Mje5/mfkDIUq0NY3WTOMQouyCPUNv.D/PMZWMJQup.y4/zbhmq",
+      "createdAt": "2026-02-24T16:32:26.802Z"
+    },
+    {
+      "id": "u_stu1",
+      "studentId": "20230001",
+      "name": "张三",
+      "grade": "2023",
+      "college": "财政税务学院",
+      "role": "student",
+      "points": 0,
+      "passwordHash": "$2a$10$9v4Mje5/mfkDIUq0NY3WTOMQouyCPUNv.D/PMZWMJQup.y4/zbhmq",
+      "createdAt": "2026-02-24T16:32:26.802Z"
+    },
+    {
+      "id": "u_stu2",
+      "studentId": "20230002",
+      "name": "李四",
+      "grade": "2023",
+      "college": "会计学院",
+      "role": "student",
+      "points": 0,
+      "passwordHash": "$2a$10$9v4Mje5/mfkDIUq0NY3WTOMQouyCPUNv.D/PMZWMJQup.y4/zbhmq",
+      "createdAt": "2026-02-24T16:32:26.802Z"
+    }
+  ],
+  "activities": [
+    {
+      "id": "act_1",
+      "title": "活动1：志愿服务专题",
+      "type": "志愿服务",
+      "tags": [
+        "二课堂",
+        "实践",
+        "院级"
+      ],
+      "description": "这是第1个演示活动，用于平台评审。",
+      "location": "线上腾讯会议",
+      "startTime": "2026-02-25T16:32:26.802Z",
+      "endTime": "2026-02-25T18:32:26.802Z",
+      "signupDeadline": "2026-02-24T16:32:26.802Z",
+      "capacity": 50,
+      "status": "published",
+      "createdBy": "u_admin",
+      "createdAt": "2026-02-24T16:32:26.802Z",
+      "updatedAt": "2026-02-24T16:32:26.802Z"
+    },
+    {
+      "id": "act_2",
+      "title": "活动2：学科竞赛专题",
+      "type": "学科竞赛",
+      "tags": [
+        "二课堂",
+        "竞赛",
+        "校级"
+      ],
+      "description": "这是第2个演示活动，用于平台评审。",
+      "location": "学术中心A101",
+      "startTime": "2026-02-26T16:32:26.802Z",
+      "endTime": "2026-02-26T18:32:26.802Z",
+      "signupDeadline": "2026-02-25T16:32:26.802Z",
+      "capacity": 55,
+      "status": "published",
+      "createdBy": "u_admin",
+      "createdAt": "2026-02-24T16:32:26.802Z",
+      "updatedAt": "2026-02-24T16:32:26.802Z"
+    },
+    {
+      "id": "act_3",
+      "title": "活动3：讲座论坛专题",
+      "type": "讲座论坛",
+      "tags": [
+        "二课堂",
+        "实践",
+        "校级"
+      ],
+      "description": "这是第3个演示活动，用于平台评审。",
+      "location": "线上腾讯会议",
+      "startTime": "2026-02-27T16:32:26.802Z",
+      "endTime": "2026-02-27T18:32:26.802Z",
+      "signupDeadline": "2026-02-26T16:32:26.802Z",
+      "capacity": 60,
+      "status": "published",
+      "createdBy": "u_admin",
+      "createdAt": "2026-02-24T16:32:26.802Z",
+      "updatedAt": "2026-02-24T16:32:26.802Z"
+    },
+    {
+      "id": "act_4",
+      "title": "活动4：创新创业专题",
+      "type": "创新创业",
+      "tags": [
+        "二课堂",
+        "竞赛",
+        "院级"
+      ],
+      "description": "这是第4个演示活动，用于平台评审。",
+      "location": "学术中心A101",
+      "startTime": "2026-02-28T16:32:26.802Z",
+      "endTime": "2026-02-28T18:32:26.802Z",
+      "signupDeadline": "2026-02-27T16:32:26.802Z",
+      "capacity": 65,
+      "status": "published",
+      "createdBy": "u_admin",
+      "createdAt": "2026-02-24T16:32:26.802Z",
+      "updatedAt": "2026-02-24T16:32:26.802Z"
+    },
+    {
+      "id": "act_5",
+      "title": "活动5：志愿服务专题",
+      "type": "志愿服务",
+      "tags": [
+        "二课堂",
+        "实践",
+        "校级"
+      ],
+      "description": "这是第5个演示活动，用于平台评审。",
+      "location": "线上腾讯会议",
+      "startTime": "2026-03-01T16:32:26.802Z",
+      "endTime": "2026-03-01T18:32:26.802Z",
+      "signupDeadline": "2026-02-28T16:32:26.802Z",
+      "capacity": 70,
+      "status": "published",
+      "createdBy": "u_admin",
+      "createdAt": "2026-02-24T16:32:26.802Z",
+      "updatedAt": "2026-02-24T16:32:26.802Z"
+    },
+    {
+      "id": "act_6",
+      "title": "活动6：学科竞赛专题",
+      "type": "学科竞赛",
+      "tags": [
+        "二课堂",
+        "竞赛",
+        "校级"
+      ],
+      "description": "这是第6个演示活动，用于平台评审。",
+      "location": "学术中心A101",
+      "startTime": "2026-03-02T16:32:26.802Z",
+      "endTime": "2026-03-02T18:32:26.802Z",
+      "signupDeadline": "2026-03-01T16:32:26.802Z",
+      "capacity": 75,
+      "status": "published",
+      "createdBy": "u_admin",
+      "createdAt": "2026-02-24T16:32:26.802Z",
+      "updatedAt": "2026-02-24T16:32:26.802Z"
+    },
+    {
+      "id": "act_7",
+      "title": "活动7：讲座论坛专题",
+      "type": "讲座论坛",
+      "tags": [
+        "二课堂",
+        "实践",
+        "院级"
+      ],
+      "description": "这是第7个演示活动，用于平台评审。",
+      "location": "线上腾讯会议",
+      "startTime": "2026-03-03T16:32:26.802Z",
+      "endTime": "2026-03-03T18:32:26.802Z",
+      "signupDeadline": "2026-03-02T16:32:26.802Z",
+      "capacity": 80,
+      "status": "published",
+      "createdBy": "u_admin",
+      "createdAt": "2026-02-24T16:32:26.802Z",
+      "updatedAt": "2026-02-24T16:32:26.802Z"
+    },
+    {
+      "id": "act_8",
+      "title": "活动8：创新创业专题",
+      "type": "创新创业",
+      "tags": [
+        "二课堂",
+        "竞赛",
+        "校级"
+      ],
+      "description": "这是第8个演示活动，用于平台评审。",
+      "location": "学术中心A101",
+      "startTime": "2026-03-04T16:32:26.802Z",
+      "endTime": "2026-03-04T18:32:26.802Z",
+      "signupDeadline": "2026-03-03T16:32:26.802Z",
+      "capacity": 85,
+      "status": "published",
+      "createdBy": "u_admin",
+      "createdAt": "2026-02-24T16:32:26.802Z",
+      "updatedAt": "2026-02-24T16:32:26.802Z"
+    },
+    {
+      "id": "act_9",
+      "title": "活动9：志愿服务专题",
+      "type": "志愿服务",
+      "tags": [
+        "二课堂",
+        "实践",
+        "校级"
+      ],
+      "description": "这是第9个演示活动，用于平台评审。",
+      "location": "线上腾讯会议",
+      "startTime": "2026-03-05T16:32:26.802Z",
+      "endTime": "2026-03-05T18:32:26.802Z",
+      "signupDeadline": "2026-03-04T16:32:26.802Z",
+      "capacity": 90,
+      "status": "draft",
+      "createdBy": "u_admin",
+      "createdAt": "2026-02-24T16:32:26.802Z",
+      "updatedAt": "2026-02-24T16:32:26.802Z"
+    },
+    {
+      "id": "act_10",
+      "title": "活动10：学科竞赛专题",
+      "type": "学科竞赛",
+      "tags": [
+        "二课堂",
+        "竞赛",
+        "院级"
+      ],
+      "description": "这是第10个演示活动，用于平台评审。",
+      "location": "学术中心A101",
+      "startTime": "2026-03-06T16:32:26.802Z",
+      "endTime": "2026-03-06T18:32:26.802Z",
+      "signupDeadline": "2026-03-05T16:32:26.802Z",
+      "capacity": 95,
+      "status": "draft",
+      "createdBy": "u_admin",
+      "createdAt": "2026-02-24T16:32:26.802Z",
+      "updatedAt": "2026-02-24T16:32:26.802Z"
+    }
+  ],
   "enrollments": [],
   "submissions": [],
-  "pointsLedger": []
+  "pointsLedger": [],
+  "notifications": []
 }

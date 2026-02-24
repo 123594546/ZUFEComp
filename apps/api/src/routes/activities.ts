@@ -34,36 +34,60 @@ router.get('/:id', async (req, res) => {
   res.json({ success: true, data: { ...a, remaining: calcRemaining(a.id, db.data.enrollments, a.capacity), myEnrollmentStatus: my?.status || null } });
 });
 
-router.post('/', requireRole('admin'), async (req, res) => {
+const canManageActivity = (user: any, type: string, status: 'draft' | 'published' | 'closed') => {
+  if (user.role === 'admin') return true;
+  const permissions = user.permissions || {};
+  if (user.role === 'activityAdmin') {
+    const inType = !permissions.manageActivityTypes?.length || permissions.manageActivityTypes.includes(type);
+    const inStatus = !permissions.manageableStatuses?.length || permissions.manageableStatuses.includes(status);
+    return inType && inStatus;
+  }
+  return false;
+};
+
+router.post('/', requireRole('admin', 'activityAdmin'), async (req, res) => {
   await db.read();
   const body = req.body;
+  if (!canManageActivity(req.user!, body.type, body.status)) return res.status(403).json({ success: false, message: '无活动管理权限' });
   const item = { id: nanoid(), ...body, createdBy: req.user!.id, createdAt: now(), updatedAt: now() };
   db.data.activities.push(item);
   await db.write();
   res.json({ success: true, data: item });
 });
-router.put('/:id', requireRole('admin'), async (req, res) => {
+router.put('/:id', requireRole('admin', 'activityAdmin'), async (req, res) => {
   await db.read();
   const i = db.data.activities.findIndex((a) => a.id === req.params.id);
   if (i < 0) return res.status(404).json({ success: false, message: '不存在' });
-  db.data.activities[i] = { ...db.data.activities[i], ...req.body, updatedAt: now() };
+  const merged = { ...db.data.activities[i], ...req.body, updatedAt: now() };
+  if (!canManageActivity(req.user!, merged.type, merged.status)) return res.status(403).json({ success: false, message: '无活动管理权限' });
+  db.data.activities[i] = merged;
   await db.write();
   res.json({ success: true, data: db.data.activities[i] });
 });
-router.patch('/:id/status', requireRole('admin'), async (req, res) => {
+router.patch('/:id/status', requireRole('admin', 'activityAdmin'), async (req, res) => {
   await db.read();
   const a = db.data.activities.find((x) => x.id === req.params.id);
   if (!a) return res.status(404).json({ success: false, message: '不存在' });
-  a.status = req.body.status;
+  const nextStatus = req.body.status as 'draft' | 'published' | 'closed';
+  if (!canManageActivity(req.user!, a.type, nextStatus)) return res.status(403).json({ success: false, message: '无活动管理权限' });
+  a.status = nextStatus;
   a.updatedAt = now();
   await db.write();
   res.json({ success: true, data: a });
 });
-router.delete('/:id', requireRole('admin'), async (req, res) => {
+router.delete('/:id', requireRole('admin', 'activityAdmin'), async (req, res) => {
   await db.read();
+  const activity = db.data.activities.find((a) => a.id === req.params.id);
+  if (!activity) return res.status(404).json({ success: false, message: '活动不存在' });
+  if (!canManageActivity(req.user!, activity.type, activity.status)) return res.status(403).json({ success: false, message: '无活动管理权限' });
+  const cascade = String(req.query.cascade || 'false') === 'true';
   db.data.activities = db.data.activities.filter((a) => a.id !== req.params.id);
+  if (cascade) {
+    db.data.enrollments = db.data.enrollments.filter((e) => e.activityId !== req.params.id);
+    db.data.submissions = db.data.submissions.filter((s) => s.activityId !== req.params.id);
+  }
   await db.write();
-  res.json({ success: true });
+  res.json({ success: true, data: { cascade } });
 });
 
 router.post('/:id/enroll', requireRole('student'), async (req, res) => {

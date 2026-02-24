@@ -53,10 +53,14 @@ export const evaluateSubmission = (params: { fileSize: number; fileName: string;
   if (params.fileSize > 10 * 1024 * 1024) reasons.push('文件超过 10MB 限制');
   if (params.note.trim().length < 5) reasons.push('说明文字过短，建议补充材料说明');
 
-  const score = Math.max(0, 100 - reasons.length * 22);
+  const ocrText = `OCR模拟提取：${params.fileName.replace(/\.[^/.]+$/, '')} ${params.note.slice(0, 80)}`.trim();
+  if (!/证书|证明|获奖|参与|完成/.test(ocrText)) reasons.push('OCR 未识别到明显证明关键词，请人工复核');
+
+  const score = Math.max(0, 100 - reasons.length * 18);
   return {
     score,
-    result: reasons.length === 0 ? 'pass' as const : 'warn' as const,
+    result: reasons.length <= 1 ? 'pass' as const : 'warn' as const,
     reasons,
+    ocrText,
   };
 };

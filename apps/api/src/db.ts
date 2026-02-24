@@ -15,13 +15,15 @@ export const db = new Low<DBSchema>(adapter, {
   activities: [],
   enrollments: [],
   submissions: [],
-  pointsLedger: []
+  pointsLedger: [],
+  notifications: []
 });
 
 export const initDB = async () => {
   await db.read();
-  db.data ||= { users: [], activities: [], enrollments: [], submissions: [], pointsLedger: [] };
+  db.data ||= { users: [], activities: [], enrollments: [], submissions: [], pointsLedger: [], notifications: [] };
   db.data.pointsLedger ||= [];
+  db.data.notifications ||= [];
   db.data.users = db.data.users.map((user) => ({ ...user, points: user.points || 0 }));
   await db.write();
 };
