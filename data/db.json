@@ -10,7 +10,7 @@
       "permissions": {},
       "points": 0,
       "passwordHash": "$2a$10$9v4Mje5/mfkDIUq0NY3WTOMQouyCPUNv.D/PMZWMJQup.y4/zbhmq",
-      "createdAt": "2026-02-24T16:32:26.800Z"
+      "createdAt": "2026-01-12T09:00:00Z"
     },
     {
       "id": "u_act_admin",
@@ -22,256 +22,1490 @@
       "permissions": {
         "manageActivityTypes": [
           "志愿服务",
-          "讲座论坛"
+          "讲座论坛",
+          "创新创业"
         ],
         "manageableStatuses": [
           "draft",
-          "published"
+          "published",
+          "closed"
         ]
       },
       "points": 0,
       "passwordHash": "$2a$10$9v4Mje5/mfkDIUq0NY3WTOMQouyCPUNv.D/PMZWMJQup.y4/zbhmq",
-      "createdAt": "2026-02-24T16:32:26.802Z"
+      "createdAt": "2026-01-14T09:00:00Z"
     },
     {
       "id": "u_reviewer",
       "studentId": "admin003",
-      "name": "审核员",
+      "name": "材料审核员",
       "grade": "教师",
       "college": "信息管理学院",
       "role": "reviewer",
       "permissions": {},
       "points": 0,
       "passwordHash": "$2a$10$9v4Mje5/mfkDIUq0NY3WTOMQouyCPUNv.D/PMZWMJQup.y4/zbhmq",
-      "createdAt": "2026-02-24T16:32:26.802Z"
+      "createdAt": "2026-01-16T09:00:00Z"
     },
     {
       "id": "u_stu1",
-      "studentId": "20230001",
-      "name": "张三",
+      "studentId": "20211300",
+      "name": "陈子涵",
       "grade": "2023",
-      "college": "财政税务学院",
+      "college": "工商管理学院",
       "role": "student",
-      "points": 0,
+      "points": 22,
       "passwordHash": "$2a$10$9v4Mje5/mfkDIUq0NY3WTOMQouyCPUNv.D/PMZWMJQup.y4/zbhmq",
-      "createdAt": "2026-02-24T16:32:26.802Z"
+      "createdAt": "2026-02-03T11:00:00Z"
     },
     {
       "id": "u_stu2",
-      "studentId": "20230002",
-      "name": "李四",
-      "grade": "2023",
+      "studentId": "20219600",
+      "name": "王一诺",
+      "grade": "2021",
+      "college": "外国语学院",
+      "role": "student",
+      "points": 10,
+      "passwordHash": "$2a$10$9v4Mje5/mfkDIUq0NY3WTOMQouyCPUNv.D/PMZWMJQup.y4/zbhmq",
+      "createdAt": "2026-02-05T09:00:00Z"
+    },
+    {
+      "id": "u_stu3",
+      "studentId": "20213700",
+      "name": "刘思远",
+      "grade": "2022",
+      "college": "财政税务学院",
+      "role": "student",
+      "points": 43,
+      "passwordHash": "$2a$10$9v4Mje5/mfkDIUq0NY3WTOMQouyCPUNv.D/PMZWMJQup.y4/zbhmq",
+      "createdAt": "2026-02-07T12:00:00Z"
+    },
+    {
+      "id": "u_stu4",
+      "studentId": "20243800",
+      "name": "赵雨桐",
+      "grade": "2024",
+      "college": "信息管理学院",
+      "role": "student",
+      "points": 59,
+      "passwordHash": "$2a$10$9v4Mje5/mfkDIUq0NY3WTOMQouyCPUNv.D/PMZWMJQup.y4/zbhmq",
+      "createdAt": "2026-02-09T09:00:00Z"
+    },
+    {
+      "id": "u_stu5",
+      "studentId": "20229900",
+      "name": "孙嘉禾",
+      "grade": "2024",
+      "college": "法学院",
+      "role": "student",
+      "points": 25,
+      "passwordHash": "$2a$10$9v4Mje5/mfkDIUq0NY3WTOMQouyCPUNv.D/PMZWMJQup.y4/zbhmq",
+      "createdAt": "2026-02-11T11:00:00Z"
+    },
+    {
+      "id": "u_stu6",
+      "studentId": "20225300",
+      "name": "周铭泽",
+      "grade": "2021",
       "college": "会计学院",
       "role": "student",
-      "points": 0,
+      "points": 32,
       "passwordHash": "$2a$10$9v4Mje5/mfkDIUq0NY3WTOMQouyCPUNv.D/PMZWMJQup.y4/zbhmq",
-      "createdAt": "2026-02-24T16:32:26.802Z"
+      "createdAt": "2026-02-13T10:00:00Z"
+    },
+    {
+      "id": "u_stu7",
+      "studentId": "20235400",
+      "name": "吴若彤",
+      "grade": "2023",
+      "college": "财政税务学院",
+      "role": "student",
+      "points": 54,
+      "passwordHash": "$2a$10$9v4Mje5/mfkDIUq0NY3WTOMQouyCPUNv.D/PMZWMJQup.y4/zbhmq",
+      "createdAt": "2026-02-15T16:00:00Z"
+    },
+    {
+      "id": "u_stu8",
+      "studentId": "20215800",
+      "name": "郑博文",
+      "grade": "2021",
+      "college": "信息管理学院",
+      "role": "student",
+      "points": 61,
+      "passwordHash": "$2a$10$9v4Mje5/mfkDIUq0NY3WTOMQouyCPUNv.D/PMZWMJQup.y4/zbhmq",
+      "createdAt": "2026-02-17T14:00:00Z"
+    },
+    {
+      "id": "u_stu9",
+      "studentId": "20221800",
+      "name": "冯欣怡",
+      "grade": "2021",
+      "college": "工商管理学院",
+      "role": "student",
+      "points": 57,
+      "passwordHash": "$2a$10$9v4Mje5/mfkDIUq0NY3WTOMQouyCPUNv.D/PMZWMJQup.y4/zbhmq",
+      "createdAt": "2026-02-19T13:00:00Z"
+    },
+    {
+      "id": "u_stu10",
+      "studentId": "20213900",
+      "name": "褚宇航",
+      "grade": "2021",
+      "college": "外国语学院",
+      "role": "student",
+      "points": 25,
+      "passwordHash": "$2a$10$9v4Mje5/mfkDIUq0NY3WTOMQouyCPUNv.D/PMZWMJQup.y4/zbhmq",
+      "createdAt": "2026-02-21T16:00:00Z"
     }
   ],
   "activities": [
     {
       "id": "act_1",
-      "title": "活动1：志愿服务专题",
+      "title": "春季社区助老志愿服务",
       "type": "志愿服务",
       "tags": [
         "二课堂",
         "实践",
-        "院级"
+        "校级"
       ],
-      "description": "这是第1个演示活动，用于平台评审。",
-      "location": "线上腾讯会议",
-      "startTime": "2026-02-25T16:32:26.802Z",
-      "endTime": "2026-02-25T18:32:26.802Z",
-      "signupDeadline": "2026-02-24T16:32:26.802Z",
-      "capacity": 50,
-      "status": "published",
-      "createdBy": "u_admin",
-      "createdAt": "2026-02-24T16:32:26.802Z",
-      "updatedAt": "2026-02-24T16:32:26.802Z"
+      "description": "春季社区助老志愿服务，聚焦志愿服务场景，支持报名、材料提交与审核流程演示。",
+      "location": "图书馆报告厅",
+      "startTime": "2026-03-02T14:00:00Z",
+      "endTime": "2026-03-02T17:00:00Z",
+      "signupDeadline": "2026-02-26T11:00:00Z",
+      "capacity": 83,
+      "status": "closed",
+      "createdBy": "u_act_admin",
+      "createdAt": "2026-02-18T14:00:00Z",
+      "updatedAt": "2026-02-25T14:00:00Z"
     },
     {
       "id": "act_2",
-      "title": "活动2：学科竞赛专题",
+      "title": "Python 数据分析挑战赛",
       "type": "学科竞赛",
       "tags": [
         "二课堂",
         "竞赛",
-        "校级"
+        "省级"
       ],
-      "description": "这是第2个演示活动，用于平台评审。",
-      "location": "学术中心A101",
-      "startTime": "2026-02-26T16:32:26.802Z",
-      "endTime": "2026-02-26T18:32:26.802Z",
-      "signupDeadline": "2026-02-25T16:32:26.802Z",
-      "capacity": 55,
-      "status": "published",
+      "description": "Python 数据分析挑战赛，聚焦学科竞赛场景，支持报名、材料提交与审核流程演示。",
+      "location": "明德楼203",
+      "startTime": "2026-03-04T14:00:00Z",
+      "endTime": "2026-03-04T17:00:00Z",
+      "signupDeadline": "2026-02-27T10:00:00Z",
+      "capacity": 54,
+      "status": "closed",
       "createdBy": "u_admin",
-      "createdAt": "2026-02-24T16:32:26.802Z",
-      "updatedAt": "2026-02-24T16:32:26.802Z"
+      "createdAt": "2026-02-20T14:00:00Z",
+      "updatedAt": "2026-03-02T14:00:00Z"
     },
     {
       "id": "act_3",
-      "title": "活动3：讲座论坛专题",
+      "title": "财税前沿名师讲坛",
       "type": "讲座论坛",
       "tags": [
-        "二课堂",
-        "实践",
-        "校级"
+        "思政",
+        "讲座",
+        "院级"
       ],
-      "description": "这是第3个演示活动，用于平台评审。",
-      "location": "线上腾讯会议",
-      "startTime": "2026-02-27T16:32:26.802Z",
-      "endTime": "2026-02-27T18:32:26.802Z",
-      "signupDeadline": "2026-02-26T16:32:26.802Z",
-      "capacity": 60,
-      "status": "published",
+      "description": "财税前沿名师讲坛，聚焦讲座论坛场景，支持报名、材料提交与审核流程演示。",
+      "location": "明德楼203",
+      "startTime": "2026-03-07T15:00:00Z",
+      "endTime": "2026-03-07T18:00:00Z",
+      "signupDeadline": "2026-03-03T14:00:00Z",
+      "capacity": 94,
+      "status": "closed",
       "createdBy": "u_admin",
-      "createdAt": "2026-02-24T16:32:26.802Z",
-      "updatedAt": "2026-02-24T16:32:26.802Z"
+      "createdAt": "2026-02-23T15:00:00Z",
+      "updatedAt": "2026-03-01T15:00:00Z"
     },
     {
       "id": "act_4",
-      "title": "活动4：创新创业专题",
+      "title": "创业计划书打磨营",
       "type": "创新创业",
       "tags": [
-        "二课堂",
-        "竞赛",
-        "院级"
+        "双创",
+        "训练",
+        "校级"
       ],
-      "description": "这是第4个演示活动，用于平台评审。",
+      "description": "创业计划书打磨营，聚焦创新创业场景，支持报名、材料提交与审核流程演示。",
       "location": "学术中心A101",
-      "startTime": "2026-02-28T16:32:26.802Z",
-      "endTime": "2026-02-28T18:32:26.802Z",
-      "signupDeadline": "2026-02-27T16:32:26.802Z",
-      "capacity": 65,
+      "startTime": "2026-03-11T15:00:00Z",
+      "endTime": "2026-03-11T19:00:00Z",
+      "signupDeadline": "2026-03-06T13:00:00Z",
+      "capacity": 177,
       "status": "published",
-      "createdBy": "u_admin",
-      "createdAt": "2026-02-24T16:32:26.802Z",
-      "updatedAt": "2026-02-24T16:32:26.802Z"
+      "createdBy": "u_act_admin",
+      "createdAt": "2026-02-27T15:00:00Z",
+      "updatedAt": "2026-03-08T15:00:00Z"
     },
     {
       "id": "act_5",
-      "title": "活动5：志愿服务专题",
-      "type": "志愿服务",
+      "title": "城市调研社会实践",
+      "type": "社会实践",
       "tags": [
-        "二课堂",
-        "实践",
-        "校级"
+        "劳动教育",
+        "志愿",
+        "社区"
       ],
-      "description": "这是第5个演示活动，用于平台评审。",
+      "description": "城市调研社会实践，聚焦社会实践场景，支持报名、材料提交与审核流程演示。",
       "location": "线上腾讯会议",
-      "startTime": "2026-03-01T16:32:26.802Z",
-      "endTime": "2026-03-01T18:32:26.802Z",
-      "signupDeadline": "2026-02-28T16:32:26.802Z",
-      "capacity": 70,
-      "status": "published",
+      "startTime": "2026-03-14T16:00:00Z",
+      "endTime": "2026-03-14T19:00:00Z",
+      "signupDeadline": "2026-03-10T13:00:00Z",
+      "capacity": 63,
+      "status": "closed",
       "createdBy": "u_admin",
-      "createdAt": "2026-02-24T16:32:26.802Z",
-      "updatedAt": "2026-02-24T16:32:26.802Z"
+      "createdAt": "2026-03-02T16:00:00Z",
+      "updatedAt": "2026-03-13T16:00:00Z"
     },
     {
       "id": "act_6",
-      "title": "活动6：学科竞赛专题",
-      "type": "学科竞赛",
-      "tags": [
-        "二课堂",
-        "竞赛",
-        "校级"
-      ],
-      "description": "这是第6个演示活动，用于平台评审。",
-      "location": "学术中心A101",
-      "startTime": "2026-03-02T16:32:26.802Z",
-      "endTime": "2026-03-02T18:32:26.802Z",
-      "signupDeadline": "2026-03-01T16:32:26.802Z",
-      "capacity": 75,
-      "status": "published",
-      "createdBy": "u_admin",
-      "createdAt": "2026-02-24T16:32:26.802Z",
-      "updatedAt": "2026-02-24T16:32:26.802Z"
-    },
-    {
-      "id": "act_7",
-      "title": "活动7：讲座论坛专题",
-      "type": "讲座论坛",
-      "tags": [
-        "二课堂",
-        "实践",
-        "院级"
-      ],
-      "description": "这是第7个演示活动，用于平台评审。",
-      "location": "线上腾讯会议",
-      "startTime": "2026-03-03T16:32:26.802Z",
-      "endTime": "2026-03-03T18:32:26.802Z",
-      "signupDeadline": "2026-03-02T16:32:26.802Z",
-      "capacity": 80,
-      "status": "published",
-      "createdBy": "u_admin",
-      "createdAt": "2026-02-24T16:32:26.802Z",
-      "updatedAt": "2026-02-24T16:32:26.802Z"
-    },
-    {
-      "id": "act_8",
-      "title": "活动8：创新创业专题",
-      "type": "创新创业",
-      "tags": [
-        "二课堂",
-        "竞赛",
-        "校级"
-      ],
-      "description": "这是第8个演示活动，用于平台评审。",
-      "location": "学术中心A101",
-      "startTime": "2026-03-04T16:32:26.802Z",
-      "endTime": "2026-03-04T18:32:26.802Z",
-      "signupDeadline": "2026-03-03T16:32:26.802Z",
-      "capacity": 85,
-      "status": "published",
-      "createdBy": "u_admin",
-      "createdAt": "2026-02-24T16:32:26.802Z",
-      "updatedAt": "2026-02-24T16:32:26.802Z"
-    },
-    {
-      "id": "act_9",
-      "title": "活动9：志愿服务专题",
+      "title": "绿色校园环保行动",
       "type": "志愿服务",
       "tags": [
         "二课堂",
         "实践",
         "校级"
       ],
-      "description": "这是第9个演示活动，用于平台评审。",
-      "location": "线上腾讯会议",
-      "startTime": "2026-03-05T16:32:26.802Z",
-      "endTime": "2026-03-05T18:32:26.802Z",
-      "signupDeadline": "2026-03-04T16:32:26.802Z",
-      "capacity": 90,
-      "status": "draft",
-      "createdBy": "u_admin",
-      "createdAt": "2026-02-24T16:32:26.802Z",
-      "updatedAt": "2026-02-24T16:32:26.802Z"
+      "description": "绿色校园环保行动，聚焦志愿服务场景，支持报名、材料提交与审核流程演示。",
+      "location": "图书馆报告厅",
+      "startTime": "2026-03-16T14:00:00Z",
+      "endTime": "2026-03-16T18:00:00Z",
+      "signupDeadline": "2026-03-13T02:00:00Z",
+      "capacity": 138,
+      "status": "closed",
+      "createdBy": "u_act_admin",
+      "createdAt": "2026-03-04T14:00:00Z",
+      "updatedAt": "2026-03-12T14:00:00Z"
     },
     {
-      "id": "act_10",
-      "title": "活动10：学科竞赛专题",
+      "id": "act_7",
+      "title": "商业案例精英赛",
       "type": "学科竞赛",
       "tags": [
         "二课堂",
         "竞赛",
+        "省级"
+      ],
+      "description": "商业案例精英赛，聚焦学科竞赛场景，支持报名、材料提交与审核流程演示。",
+      "location": "文华活动中心",
+      "startTime": "2026-03-20T16:00:00Z",
+      "endTime": "2026-03-20T19:00:00Z",
+      "signupDeadline": "2026-03-14T16:00:00Z",
+      "capacity": 108,
+      "status": "closed",
+      "createdBy": "u_admin",
+      "createdAt": "2026-03-08T16:00:00Z",
+      "updatedAt": "2026-03-14T16:00:00Z"
+    },
+    {
+      "id": "act_8",
+      "title": "人工智能应用公开课",
+      "type": "讲座论坛",
+      "tags": [
+        "思政",
+        "讲座",
         "院级"
       ],
-      "description": "这是第10个演示活动，用于平台评审。",
-      "location": "学术中心A101",
-      "startTime": "2026-03-06T16:32:26.802Z",
-      "endTime": "2026-03-06T18:32:26.802Z",
-      "signupDeadline": "2026-03-05T16:32:26.802Z",
-      "capacity": 95,
-      "status": "draft",
+      "description": "人工智能应用公开课，聚焦讲座论坛场景，支持报名、材料提交与审核流程演示。",
+      "location": "明德楼203",
+      "startTime": "2026-03-23T14:00:00Z",
+      "endTime": "2026-03-23T17:00:00Z",
+      "signupDeadline": "2026-03-18T12:00:00Z",
+      "capacity": 168,
+      "status": "published",
+      "createdBy": "u_act_admin",
+      "createdAt": "2026-03-11T14:00:00Z",
+      "updatedAt": "2026-03-21T14:00:00Z"
+    },
+    {
+      "id": "act_9",
+      "title": "跨境电商创新工坊",
+      "type": "创新创业",
+      "tags": [
+        "双创",
+        "训练",
+        "校级"
+      ],
+      "description": "跨境电商创新工坊，聚焦创新创业场景，支持报名、材料提交与审核流程演示。",
+      "location": "明德楼203",
+      "startTime": "2026-03-25T16:00:00Z",
+      "endTime": "2026-03-25T19:00:00Z",
+      "signupDeadline": "2026-03-17T06:00:00Z",
+      "capacity": 81,
+      "status": "published",
       "createdBy": "u_admin",
-      "createdAt": "2026-02-24T16:32:26.802Z",
-      "updatedAt": "2026-02-24T16:32:26.802Z"
+      "createdAt": "2026-03-13T16:00:00Z",
+      "updatedAt": "2026-03-20T16:00:00Z"
+    },
+    {
+      "id": "act_10",
+      "title": "乡村振兴志愿行",
+      "type": "社会实践",
+      "tags": [
+        "劳动教育",
+        "志愿",
+        "社区"
+      ],
+      "description": "乡村振兴志愿行，聚焦社会实践场景，支持报名、材料提交与审核流程演示。",
+      "location": "明德楼203",
+      "startTime": "2026-03-28T16:00:00Z",
+      "endTime": "2026-03-28T19:00:00Z",
+      "signupDeadline": "2026-03-23T16:00:00Z",
+      "capacity": 101,
+      "status": "published",
+      "createdBy": "u_admin",
+      "createdAt": "2026-03-16T16:00:00Z",
+      "updatedAt": "2026-03-27T16:00:00Z"
+    },
+    {
+      "id": "act_11",
+      "title": "管理端：第二课堂活动规范培训",
+      "type": "志愿服务",
+      "tags": [
+        "二课堂",
+        "实践",
+        "校级"
+      ],
+      "description": "管理端：第二课堂活动规范培训，聚焦志愿服务场景，支持报名、材料提交与审核流程演示。",
+      "location": "文华活动中心",
+      "startTime": "2026-03-31T16:00:00Z",
+      "endTime": "2026-03-31T18:00:00Z",
+      "signupDeadline": "2026-03-29T05:00:00Z",
+      "capacity": 72,
+      "status": "draft",
+      "createdBy": "u_act_admin",
+      "createdAt": "2026-03-19T16:00:00Z",
+      "updatedAt": "2026-03-29T16:00:00Z"
+    },
+    {
+      "id": "act_12",
+      "title": "管理端：赛事项目立项评审会",
+      "type": "学科竞赛",
+      "tags": [
+        "二课堂",
+        "竞赛",
+        "省级"
+      ],
+      "description": "管理端：赛事项目立项评审会，聚焦学科竞赛场景，支持报名、材料提交与审核流程演示。",
+      "location": "文华活动中心",
+      "startTime": "2026-04-04T16:00:00Z",
+      "endTime": "2026-04-04T18:00:00Z",
+      "signupDeadline": "2026-03-31T08:00:00Z",
+      "capacity": 91,
+      "status": "draft",
+      "createdBy": "u_act_admin",
+      "createdAt": "2026-03-23T16:00:00Z",
+      "updatedAt": "2026-03-29T16:00:00Z"
+    },
+    {
+      "id": "act_13",
+      "title": "管理端：活动经费预算工作坊",
+      "type": "讲座论坛",
+      "tags": [
+        "思政",
+        "讲座",
+        "院级"
+      ],
+      "description": "管理端：活动经费预算工作坊，聚焦讲座论坛场景，支持报名、材料提交与审核流程演示。",
+      "location": "线上腾讯会议",
+      "startTime": "2026-04-07T15:00:00Z",
+      "endTime": "2026-04-07T19:00:00Z",
+      "signupDeadline": "2026-03-31T10:00:00Z",
+      "capacity": 70,
+      "status": "closed",
+      "createdBy": "u_act_admin",
+      "createdAt": "2026-03-26T15:00:00Z",
+      "updatedAt": "2026-04-05T15:00:00Z"
+    },
+    {
+      "id": "act_14",
+      "title": "管理端：材料审核标准统一会",
+      "type": "创新创业",
+      "tags": [
+        "双创",
+        "训练",
+        "校级"
+      ],
+      "description": "管理端：材料审核标准统一会，聚焦创新创业场景，支持报名、材料提交与审核流程演示。",
+      "location": "学术中心A101",
+      "startTime": "2026-04-09T14:00:00Z",
+      "endTime": "2026-04-09T17:00:00Z",
+      "signupDeadline": "2026-04-07T05:00:00Z",
+      "capacity": 41,
+      "status": "closed",
+      "createdBy": "u_admin",
+      "createdAt": "2026-03-28T14:00:00Z",
+      "updatedAt": "2026-04-08T14:00:00Z"
+    },
+    {
+      "id": "act_15",
+      "title": "管理端：学期活动复盘闭门会",
+      "type": "社会实践",
+      "tags": [
+        "劳动教育",
+        "志愿",
+        "社区"
+      ],
+      "description": "管理端：学期活动复盘闭门会，聚焦社会实践场景，支持报名、材料提交与审核流程演示。",
+      "location": "学术中心A101",
+      "startTime": "2026-04-12T14:00:00Z",
+      "endTime": "2026-04-12T16:00:00Z",
+      "signupDeadline": "2026-04-10T09:00:00Z",
+      "capacity": 111,
+      "status": "closed",
+      "createdBy": "u_admin",
+      "createdAt": "2026-03-31T14:00:00Z",
+      "updatedAt": "2026-04-06T14:00:00Z"
     }
   ],
-  "enrollments": [],
-  "submissions": [],
-  "pointsLedger": [],
-  "notifications": []
+  "enrollments": [
+    {
+      "id": "enr_1",
+      "activityId": "act_4",
+      "userId": "u_stu1",
+      "status": "cancelled",
+      "createdAt": "2026-03-03T10:00:00Z",
+      "updatedAt": "2026-03-05T16:00:00Z"
+    },
+    {
+      "id": "enr_2",
+      "activityId": "act_9",
+      "userId": "u_stu1",
+      "status": "enrolled",
+      "createdAt": "2026-03-16T05:00:00Z",
+      "updatedAt": "2026-03-18T14:00:00Z"
+    },
+    {
+      "id": "enr_3",
+      "activityId": "act_3",
+      "userId": "u_stu1",
+      "status": "cancelled",
+      "createdAt": "2026-03-02T11:00:00Z",
+      "updatedAt": "2026-03-03T06:00:00Z"
+    },
+    {
+      "id": "enr_4",
+      "activityId": "act_3",
+      "userId": "u_stu2",
+      "status": "cancelled",
+      "createdAt": "2026-03-02T13:00:00Z",
+      "updatedAt": "2026-03-05T13:00:00Z"
+    },
+    {
+      "id": "enr_5",
+      "activityId": "act_5",
+      "userId": "u_stu2",
+      "status": "enrolled",
+      "createdAt": "2026-03-10T13:00:00Z",
+      "updatedAt": "2026-03-11T02:00:00Z"
+    },
+    {
+      "id": "enr_6",
+      "activityId": "act_8",
+      "userId": "u_stu2",
+      "status": "cancelled",
+      "createdAt": "2026-03-17T10:00:00Z",
+      "updatedAt": "2026-03-20T02:00:00Z"
+    },
+    {
+      "id": "enr_7",
+      "activityId": "act_4",
+      "userId": "u_stu3",
+      "status": "enrolled",
+      "createdAt": "2026-03-05T07:00:00Z",
+      "updatedAt": "2026-03-07T10:00:00Z"
+    },
+    {
+      "id": "enr_8",
+      "activityId": "act_7",
+      "userId": "u_stu3",
+      "status": "enrolled",
+      "createdAt": "2026-03-14T07:00:00Z",
+      "updatedAt": "2026-03-16T01:00:00Z"
+    },
+    {
+      "id": "enr_9",
+      "activityId": "act_1",
+      "userId": "u_stu3",
+      "status": "enrolled",
+      "createdAt": "2026-02-25T02:00:00Z",
+      "updatedAt": "2026-02-25T14:00:00Z"
+    },
+    {
+      "id": "enr_10",
+      "activityId": "act_6",
+      "userId": "u_stu4",
+      "status": "enrolled",
+      "createdAt": "2026-03-09T17:00:00Z",
+      "updatedAt": "2026-03-10T04:00:00Z"
+    },
+    {
+      "id": "enr_11",
+      "activityId": "act_2",
+      "userId": "u_stu4",
+      "status": "enrolled",
+      "createdAt": "2026-02-27T00:00:00Z",
+      "updatedAt": "2026-02-27T15:00:00Z"
+    },
+    {
+      "id": "enr_12",
+      "activityId": "act_1",
+      "userId": "u_stu4",
+      "status": "enrolled",
+      "createdAt": "2026-02-25T07:00:00Z",
+      "updatedAt": "2026-02-25T22:00:00Z"
+    },
+    {
+      "id": "enr_13",
+      "activityId": "act_2",
+      "userId": "u_stu5",
+      "status": "enrolled",
+      "createdAt": "2026-02-25T10:00:00Z",
+      "updatedAt": "2026-02-27T06:00:00Z"
+    },
+    {
+      "id": "enr_14",
+      "activityId": "act_7",
+      "userId": "u_stu5",
+      "status": "cancelled",
+      "createdAt": "2026-03-12T14:00:00Z",
+      "updatedAt": "2026-03-15T14:00:00Z"
+    },
+    {
+      "id": "enr_15",
+      "activityId": "act_7",
+      "userId": "u_stu6",
+      "status": "enrolled",
+      "createdAt": "2026-03-14T14:00:00Z",
+      "updatedAt": "2026-03-16T15:00:00Z"
+    },
+    {
+      "id": "enr_16",
+      "activityId": "act_9",
+      "userId": "u_stu6",
+      "status": "enrolled",
+      "createdAt": "2026-03-13T21:00:00Z",
+      "updatedAt": "2026-03-15T05:00:00Z"
+    },
+    {
+      "id": "enr_17",
+      "activityId": "act_1",
+      "userId": "u_stu6",
+      "status": "enrolled",
+      "createdAt": "2026-02-25T05:00:00Z",
+      "updatedAt": "2026-02-26T05:00:00Z"
+    },
+    {
+      "id": "enr_18",
+      "activityId": "act_8",
+      "userId": "u_stu6",
+      "status": "enrolled",
+      "createdAt": "2026-03-15T07:00:00Z",
+      "updatedAt": "2026-03-16T14:00:00Z"
+    },
+    {
+      "id": "enr_19",
+      "activityId": "act_5",
+      "userId": "u_stu7",
+      "status": "enrolled",
+      "createdAt": "2026-03-08T13:00:00Z",
+      "updatedAt": "2026-03-10T22:00:00Z"
+    },
+    {
+      "id": "enr_20",
+      "activityId": "act_3",
+      "userId": "u_stu7",
+      "status": "enrolled",
+      "createdAt": "2026-02-28T13:00:00Z",
+      "updatedAt": "2026-03-02T07:00:00Z"
+    },
+    {
+      "id": "enr_21",
+      "activityId": "act_3",
+      "userId": "u_stu8",
+      "status": "enrolled",
+      "createdAt": "2026-03-03T10:00:00Z",
+      "updatedAt": "2026-03-04T14:00:00Z"
+    },
+    {
+      "id": "enr_22",
+      "activityId": "act_5",
+      "userId": "u_stu8",
+      "status": "enrolled",
+      "createdAt": "2026-03-08T12:00:00Z",
+      "updatedAt": "2026-03-10T05:00:00Z"
+    },
+    {
+      "id": "enr_23",
+      "activityId": "act_7",
+      "userId": "u_stu8",
+      "status": "cancelled",
+      "createdAt": "2026-03-11T09:00:00Z",
+      "updatedAt": "2026-03-12T18:00:00Z"
+    },
+    {
+      "id": "enr_24",
+      "activityId": "act_9",
+      "userId": "u_stu8",
+      "status": "enrolled",
+      "createdAt": "2026-03-15T20:00:00Z",
+      "updatedAt": "2026-03-16T11:00:00Z"
+    },
+    {
+      "id": "enr_25",
+      "activityId": "act_3",
+      "userId": "u_stu9",
+      "status": "enrolled",
+      "createdAt": "2026-02-28T14:00:00Z",
+      "updatedAt": "2026-03-01T07:00:00Z"
+    },
+    {
+      "id": "enr_26",
+      "activityId": "act_9",
+      "userId": "u_stu9",
+      "status": "enrolled",
+      "createdAt": "2026-03-15T03:00:00Z",
+      "updatedAt": "2026-03-17T23:00:00Z"
+    },
+    {
+      "id": "enr_27",
+      "activityId": "act_3",
+      "userId": "u_stu10",
+      "status": "enrolled",
+      "createdAt": "2026-02-28T12:00:00Z",
+      "updatedAt": "2026-02-28T22:00:00Z"
+    },
+    {
+      "id": "enr_28",
+      "activityId": "act_4",
+      "userId": "u_stu10",
+      "status": "cancelled",
+      "createdAt": "2026-03-04T09:00:00Z",
+      "updatedAt": "2026-03-06T16:00:00Z"
+    }
+  ],
+  "submissions": [
+    {
+      "id": "sub_1",
+      "activityId": "act_9",
+      "userId": "u_stu1",
+      "fileName": "u_stu1_act_9_1.pdf",
+      "filePath": "/uploads/materials/u_stu1_act_9_1.pdf",
+      "mimeType": "application/pdf",
+      "note": "实践报告与证明材料",
+      "status": "pending",
+      "aiReview": {
+        "score": 88,
+        "result": "pass",
+        "reasons": [
+          "检测到签到信息",
+          "字数达标",
+          "图片清晰"
+        ]
+      },
+      "createdAt": "2026-03-28T01:00:00Z",
+      "updatedAt": "2026-03-28T13:00:00Z"
+    },
+    {
+      "id": "sub_2",
+      "activityId": "act_4",
+      "userId": "u_stu3",
+      "fileName": "u_stu3_act_4_2.pdf",
+      "filePath": "/uploads/materials/u_stu3_act_4_2.pdf",
+      "mimeType": "application/pdf",
+      "note": "实践报告与证明材料",
+      "status": "rejected",
+      "reviewerId": "u_reviewer",
+      "reviewNote": "截图不清晰，需重新提交。",
+      "aiReview": {
+        "score": 93,
+        "result": "warn",
+        "reasons": [
+          "字数达标",
+          "内容与主题相关",
+          "检测到签到信息"
+        ]
+      },
+      "createdAt": "2026-03-14T07:00:00Z",
+      "updatedAt": "2026-03-14T18:00:00Z"
+    },
+    {
+      "id": "sub_3",
+      "activityId": "act_7",
+      "userId": "u_stu3",
+      "fileName": "u_stu3_act_7_3.pdf",
+      "filePath": "/uploads/materials/u_stu3_act_7_3.pdf",
+      "mimeType": "application/pdf",
+      "note": "活动总结与签到截图",
+      "status": "approved",
+      "reviewerId": "u_admin",
+      "reviewNote": "证明文件清晰，审核通过。",
+      "aiReview": {
+        "score": 95,
+        "result": "pass",
+        "reasons": [
+          "检测到签到信息",
+          "结构完整",
+          "图片清晰"
+        ]
+      },
+      "createdAt": "2026-03-23T10:00:00Z",
+      "updatedAt": "2026-03-23T19:00:00Z"
+    },
+    {
+      "id": "sub_4",
+      "activityId": "act_1",
+      "userId": "u_stu3",
+      "fileName": "u_stu3_act_1_4.pdf",
+      "filePath": "/uploads/materials/u_stu3_act_1_4.pdf",
+      "mimeType": "application/pdf",
+      "note": "实践报告与证明材料",
+      "status": "rejected",
+      "reviewerId": "u_reviewer",
+      "reviewNote": "缺少关键佐证，请补充。",
+      "aiReview": {
+        "score": 90,
+        "result": "pass",
+        "reasons": [
+          "内容与主题相关",
+          "图片清晰",
+          "结构完整"
+        ]
+      },
+      "createdAt": "2026-03-05T13:00:00Z",
+      "updatedAt": "2026-03-05T19:00:00Z"
+    },
+    {
+      "id": "sub_5",
+      "activityId": "act_6",
+      "userId": "u_stu4",
+      "fileName": "u_stu4_act_6_5.pdf",
+      "filePath": "/uploads/materials/u_stu4_act_6_5.pdf",
+      "mimeType": "application/pdf",
+      "note": "活动总结与签到截图",
+      "status": "rejected",
+      "reviewerId": "u_admin",
+      "reviewNote": "文件内容与活动不匹配。",
+      "aiReview": {
+        "score": 96,
+        "result": "pass",
+        "reasons": [
+          "图片清晰",
+          "结构完整",
+          "检测到签到信息"
+        ]
+      },
+      "createdAt": "2026-03-19T12:00:00Z",
+      "updatedAt": "2026-03-20T04:00:00Z"
+    },
+    {
+      "id": "sub_6",
+      "activityId": "act_1",
+      "userId": "u_stu4",
+      "fileName": "u_stu4_act_1_6.pdf",
+      "filePath": "/uploads/materials/u_stu4_act_1_6.pdf",
+      "mimeType": "application/pdf",
+      "note": "活动总结与签到截图",
+      "status": "rejected",
+      "reviewerId": "u_reviewer",
+      "reviewNote": "截图不清晰，需重新提交。",
+      "aiReview": {
+        "score": 90,
+        "result": "pass",
+        "reasons": [
+          "内容与主题相关",
+          "图片清晰",
+          "字数达标"
+        ]
+      },
+      "createdAt": "2026-03-03T14:00:00Z",
+      "updatedAt": "2026-03-04T07:00:00Z"
+    },
+    {
+      "id": "sub_7",
+      "activityId": "act_7",
+      "userId": "u_stu6",
+      "fileName": "u_stu6_act_7_7.pdf",
+      "filePath": "/uploads/materials/u_stu6_act_7_7.pdf",
+      "mimeType": "application/pdf",
+      "note": "心得体会与现场照片",
+      "status": "approved",
+      "reviewerId": "u_admin",
+      "reviewNote": "材料完整，符合活动要求。",
+      "aiReview": {
+        "score": 79,
+        "result": "pass",
+        "reasons": [
+          "图片清晰",
+          "内容与主题相关",
+          "结构完整"
+        ]
+      },
+      "createdAt": "2026-03-21T15:00:00Z",
+      "updatedAt": "2026-03-22T00:00:00Z"
+    },
+    {
+      "id": "sub_8",
+      "activityId": "act_1",
+      "userId": "u_stu6",
+      "fileName": "u_stu6_act_1_8.pdf",
+      "filePath": "/uploads/materials/u_stu6_act_1_8.pdf",
+      "mimeType": "application/pdf",
+      "note": "活动总结与签到截图",
+      "status": "approved",
+      "reviewerId": "u_admin",
+      "reviewNote": "内容详实，予以通过。",
+      "aiReview": {
+        "score": 93,
+        "result": "warn",
+        "reasons": [
+          "检测到签到信息",
+          "字数达标",
+          "结构完整"
+        ]
+      },
+      "createdAt": "2026-03-04T13:00:00Z",
+      "updatedAt": "2026-03-05T06:00:00Z"
+    },
+    {
+      "id": "sub_9",
+      "activityId": "act_8",
+      "userId": "u_stu6",
+      "fileName": "u_stu6_act_8_9.pdf",
+      "filePath": "/uploads/materials/u_stu6_act_8_9.pdf",
+      "mimeType": "application/pdf",
+      "note": "活动总结与签到截图",
+      "status": "approved",
+      "reviewerId": "u_reviewer",
+      "reviewNote": "内容详实，予以通过。",
+      "aiReview": {
+        "score": 92,
+        "result": "pass",
+        "reasons": [
+          "图片清晰",
+          "字数达标",
+          "结构完整"
+        ]
+      },
+      "createdAt": "2026-03-24T19:00:00Z",
+      "updatedAt": "2026-03-25T14:00:00Z"
+    },
+    {
+      "id": "sub_10",
+      "activityId": "act_5",
+      "userId": "u_stu7",
+      "fileName": "u_stu7_act_5_10.pdf",
+      "filePath": "/uploads/materials/u_stu7_act_5_10.pdf",
+      "mimeType": "application/pdf",
+      "note": "实践报告与证明材料",
+      "status": "approved",
+      "reviewerId": "u_admin",
+      "reviewNote": "内容详实，予以通过。",
+      "aiReview": {
+        "score": 74,
+        "result": "pass",
+        "reasons": [
+          "检测到签到信息",
+          "字数达标",
+          "结构完整"
+        ]
+      },
+      "createdAt": "2026-03-16T13:00:00Z",
+      "updatedAt": "2026-03-17T07:00:00Z"
+    },
+    {
+      "id": "sub_11",
+      "activityId": "act_3",
+      "userId": "u_stu7",
+      "fileName": "u_stu7_act_3_11.pdf",
+      "filePath": "/uploads/materials/u_stu7_act_3_11.pdf",
+      "mimeType": "application/pdf",
+      "note": "心得体会与现场照片",
+      "status": "rejected",
+      "reviewerId": "u_reviewer",
+      "reviewNote": "截图不清晰，需重新提交。",
+      "aiReview": {
+        "score": 78,
+        "result": "pass",
+        "reasons": [
+          "图片清晰",
+          "内容与主题相关",
+          "检测到签到信息"
+        ]
+      },
+      "createdAt": "2026-03-08T11:00:00Z",
+      "updatedAt": "2026-03-09T02:00:00Z"
+    },
+    {
+      "id": "sub_12",
+      "activityId": "act_3",
+      "userId": "u_stu8",
+      "fileName": "u_stu8_act_3_12.pdf",
+      "filePath": "/uploads/materials/u_stu8_act_3_12.pdf",
+      "mimeType": "application/pdf",
+      "note": "实践报告与证明材料",
+      "status": "approved",
+      "reviewerId": "u_reviewer",
+      "reviewNote": "内容详实，予以通过。",
+      "aiReview": {
+        "score": 74,
+        "result": "warn",
+        "reasons": [
+          "字数达标",
+          "内容与主题相关",
+          "图片清晰"
+        ]
+      },
+      "createdAt": "2026-03-09T13:00:00Z",
+      "updatedAt": "2026-03-09T17:00:00Z"
+    },
+    {
+      "id": "sub_13",
+      "activityId": "act_5",
+      "userId": "u_stu8",
+      "fileName": "u_stu8_act_5_13.pdf",
+      "filePath": "/uploads/materials/u_stu8_act_5_13.pdf",
+      "mimeType": "application/pdf",
+      "note": "活动总结与签到截图",
+      "status": "approved",
+      "reviewerId": "u_admin",
+      "reviewNote": "材料完整，符合活动要求。",
+      "aiReview": {
+        "score": 83,
+        "result": "warn",
+        "reasons": [
+          "检测到签到信息",
+          "字数达标",
+          "内容与主题相关"
+        ]
+      },
+      "createdAt": "2026-03-15T22:00:00Z",
+      "updatedAt": "2026-03-16T20:00:00Z"
+    },
+    {
+      "id": "sub_14",
+      "activityId": "act_3",
+      "userId": "u_stu9",
+      "fileName": "u_stu9_act_3_14.pdf",
+      "filePath": "/uploads/materials/u_stu9_act_3_14.pdf",
+      "mimeType": "application/pdf",
+      "note": "实践报告与证明材料",
+      "status": "rejected",
+      "reviewerId": "u_reviewer",
+      "reviewNote": "截图不清晰，需重新提交。",
+      "aiReview": {
+        "score": 96,
+        "result": "warn",
+        "reasons": [
+          "字数达标",
+          "结构完整",
+          "检测到签到信息"
+        ]
+      },
+      "createdAt": "2026-03-10T07:00:00Z",
+      "updatedAt": "2026-03-11T00:00:00Z"
+    },
+    {
+      "id": "sub_15",
+      "activityId": "act_9",
+      "userId": "u_stu9",
+      "fileName": "u_stu9_act_9_15.pdf",
+      "filePath": "/uploads/materials/u_stu9_act_9_15.pdf",
+      "mimeType": "application/pdf",
+      "note": "实践报告与证明材料",
+      "status": "rejected",
+      "reviewerId": "u_reviewer",
+      "reviewNote": "缺少关键佐证，请补充。",
+      "aiReview": {
+        "score": 77,
+        "result": "pass",
+        "reasons": [
+          "图片清晰",
+          "结构完整",
+          "内容与主题相关"
+        ]
+      },
+      "createdAt": "2026-03-27T03:00:00Z",
+      "updatedAt": "2026-03-27T22:00:00Z"
+    },
+    {
+      "id": "sub_16",
+      "activityId": "act_3",
+      "userId": "u_stu10",
+      "fileName": "u_stu10_act_3_16.pdf",
+      "filePath": "/uploads/materials/u_stu10_act_3_16.pdf",
+      "mimeType": "application/pdf",
+      "note": "活动总结与签到截图",
+      "status": "approved",
+      "reviewerId": "u_reviewer",
+      "reviewNote": "材料完整，符合活动要求。",
+      "aiReview": {
+        "score": 94,
+        "result": "pass",
+        "reasons": [
+          "字数达标",
+          "检测到签到信息",
+          "图片清晰"
+        ]
+      },
+      "createdAt": "2026-03-09T14:00:00Z",
+      "updatedAt": "2026-03-10T04:00:00Z"
+    }
+  ],
+  "pointsLedger": [
+    {
+      "id": "pl_7",
+      "userId": "u_stu3",
+      "type": "enrollment",
+      "refId": "enr_9",
+      "points": 2,
+      "note": "报名活动 春季社区助老志愿服务",
+      "createdAt": "2026-02-25T02:05:00Z"
+    },
+    {
+      "id": "pl_15",
+      "userId": "u_stu6",
+      "type": "enrollment",
+      "refId": "enr_17",
+      "points": 2,
+      "note": "报名活动 春季社区助老志愿服务",
+      "createdAt": "2026-02-25T05:05:00Z"
+    },
+    {
+      "id": "pl_10",
+      "userId": "u_stu4",
+      "type": "enrollment",
+      "refId": "enr_12",
+      "points": 2,
+      "note": "报名活动 春季社区助老志愿服务",
+      "createdAt": "2026-02-25T07:05:00Z"
+    },
+    {
+      "id": "pl_11",
+      "userId": "u_stu5",
+      "type": "enrollment",
+      "refId": "enr_13",
+      "points": 2,
+      "note": "报名活动 Python 数据分析挑战赛",
+      "createdAt": "2026-02-25T10:05:00Z"
+    },
+    {
+      "id": "pl_9",
+      "userId": "u_stu4",
+      "type": "enrollment",
+      "refId": "enr_11",
+      "points": 2,
+      "note": "报名活动 Python 数据分析挑战赛",
+      "createdAt": "2026-02-27T00:05:00Z"
+    },
+    {
+      "id": "pl_29",
+      "userId": "u_stu10",
+      "type": "enrollment",
+      "refId": "enr_27",
+      "points": 2,
+      "note": "报名活动 财税前沿名师讲坛",
+      "createdAt": "2026-02-28T12:05:00Z"
+    },
+    {
+      "id": "pl_21",
+      "userId": "u_stu7",
+      "type": "enrollment",
+      "refId": "enr_20",
+      "points": 2,
+      "note": "报名活动 财税前沿名师讲坛",
+      "createdAt": "2026-02-28T13:05:00Z"
+    },
+    {
+      "id": "pl_27",
+      "userId": "u_stu9",
+      "type": "enrollment",
+      "refId": "enr_25",
+      "points": 2,
+      "note": "报名活动 财税前沿名师讲坛",
+      "createdAt": "2026-02-28T14:05:00Z"
+    },
+    {
+      "id": "pl_22",
+      "userId": "u_stu8",
+      "type": "enrollment",
+      "refId": "enr_21",
+      "points": 2,
+      "note": "报名活动 财税前沿名师讲坛",
+      "createdAt": "2026-03-03T10:05:00Z"
+    },
+    {
+      "id": "pl_16",
+      "userId": "u_stu6",
+      "type": "submissionApproved",
+      "refId": "sub_8",
+      "points": 4,
+      "note": "材料审核通过：春季社区助老志愿服务",
+      "createdAt": "2026-03-04T16:00:00Z"
+    },
+    {
+      "id": "pl_4",
+      "userId": "u_stu3",
+      "type": "enrollment",
+      "refId": "enr_7",
+      "points": 2,
+      "note": "报名活动 创业计划书打磨营",
+      "createdAt": "2026-03-05T07:05:00Z"
+    },
+    {
+      "id": "pl_24",
+      "userId": "u_stu8",
+      "type": "enrollment",
+      "refId": "enr_22",
+      "points": 2,
+      "note": "报名活动 城市调研社会实践",
+      "createdAt": "2026-03-08T12:05:00Z"
+    },
+    {
+      "id": "pl_19",
+      "userId": "u_stu7",
+      "type": "enrollment",
+      "refId": "enr_19",
+      "points": 2,
+      "note": "报名活动 城市调研社会实践",
+      "createdAt": "2026-03-08T13:05:00Z"
+    },
+    {
+      "id": "pl_23",
+      "userId": "u_stu8",
+      "type": "submissionApproved",
+      "refId": "sub_12",
+      "points": 6,
+      "note": "材料审核通过：财税前沿名师讲坛",
+      "createdAt": "2026-03-09T16:00:00Z"
+    },
+    {
+      "id": "pl_30",
+      "userId": "u_stu10",
+      "type": "submissionApproved",
+      "refId": "sub_16",
+      "points": 4,
+      "note": "材料审核通过：财税前沿名师讲坛",
+      "createdAt": "2026-03-09T17:00:00Z"
+    },
+    {
+      "id": "pl_8",
+      "userId": "u_stu4",
+      "type": "enrollment",
+      "refId": "enr_10",
+      "points": 2,
+      "note": "报名活动 绿色校园环保行动",
+      "createdAt": "2026-03-09T17:05:00Z"
+    },
+    {
+      "id": "pl_3",
+      "userId": "u_stu2",
+      "type": "enrollment",
+      "refId": "enr_5",
+      "points": 2,
+      "note": "报名活动 城市调研社会实践",
+      "createdAt": "2026-03-10T13:05:00Z"
+    },
+    {
+      "id": "pl_14",
+      "userId": "u_stu6",
+      "type": "enrollment",
+      "refId": "enr_16",
+      "points": 2,
+      "note": "报名活动 跨境电商创新工坊",
+      "createdAt": "2026-03-13T21:05:00Z"
+    },
+    {
+      "id": "pl_5",
+      "userId": "u_stu3",
+      "type": "enrollment",
+      "refId": "enr_8",
+      "points": 2,
+      "note": "报名活动 商业案例精英赛",
+      "createdAt": "2026-03-14T07:05:00Z"
+    },
+    {
+      "id": "pl_12",
+      "userId": "u_stu6",
+      "type": "enrollment",
+      "refId": "enr_15",
+      "points": 2,
+      "note": "报名活动 商业案例精英赛",
+      "createdAt": "2026-03-14T14:05:00Z"
+    },
+    {
+      "id": "pl_28",
+      "userId": "u_stu9",
+      "type": "enrollment",
+      "refId": "enr_26",
+      "points": 2,
+      "note": "报名活动 跨境电商创新工坊",
+      "createdAt": "2026-03-15T03:05:00Z"
+    },
+    {
+      "id": "pl_17",
+      "userId": "u_stu6",
+      "type": "enrollment",
+      "refId": "enr_18",
+      "points": 2,
+      "note": "报名活动 人工智能应用公开课",
+      "createdAt": "2026-03-15T07:05:00Z"
+    },
+    {
+      "id": "pl_26",
+      "userId": "u_stu8",
+      "type": "enrollment",
+      "refId": "enr_24",
+      "points": 2,
+      "note": "报名活动 跨境电商创新工坊",
+      "createdAt": "2026-03-15T20:05:00Z"
+    },
+    {
+      "id": "pl_25",
+      "userId": "u_stu8",
+      "type": "submissionApproved",
+      "refId": "sub_13",
+      "points": 6,
+      "note": "材料审核通过：城市调研社会实践",
+      "createdAt": "2026-03-16T01:00:00Z"
+    },
+    {
+      "id": "pl_1",
+      "userId": "u_stu1",
+      "type": "enrollment",
+      "refId": "enr_2",
+      "points": 2,
+      "note": "报名活动 跨境电商创新工坊",
+      "createdAt": "2026-03-16T05:05:00Z"
+    },
+    {
+      "id": "pl_20",
+      "userId": "u_stu7",
+      "type": "submissionApproved",
+      "refId": "sub_10",
+      "points": 5,
+      "note": "材料审核通过：城市调研社会实践",
+      "createdAt": "2026-03-16T16:00:00Z"
+    },
+    {
+      "id": "pl_13",
+      "userId": "u_stu6",
+      "type": "submissionApproved",
+      "refId": "sub_7",
+      "points": 5,
+      "note": "材料审核通过：商业案例精英赛",
+      "createdAt": "2026-03-21T18:00:00Z"
+    },
+    {
+      "id": "pl_6",
+      "userId": "u_stu3",
+      "type": "submissionApproved",
+      "refId": "sub_3",
+      "points": 4,
+      "note": "材料审核通过：商业案例精英赛",
+      "createdAt": "2026-03-23T13:00:00Z"
+    },
+    {
+      "id": "pl_18",
+      "userId": "u_stu6",
+      "type": "submissionApproved",
+      "refId": "sub_9",
+      "points": 4,
+      "note": "材料审核通过：人工智能应用公开课",
+      "createdAt": "2026-03-24T22:00:00Z"
+    },
+    {
+      "id": "pl_2",
+      "userId": "u_stu1",
+      "type": "submissionApproved",
+      "refId": "sub_1",
+      "points": 4,
+      "note": "材料审核通过：跨境电商创新工坊",
+      "createdAt": "2026-03-28T04:00:00Z"
+    }
+  ],
+  "notifications": [
+    {
+      "id": "noti_1",
+      "userId": "u_stu1",
+      "title": "材料审核结果通知",
+      "content": "你在《跨境电商创新工坊》提交的材料状态为：approved。",
+      "type": "submission_reviewed",
+      "read": true,
+      "createdAt": "2026-03-28T01:10:00Z"
+    },
+    {
+      "id": "noti_2",
+      "userId": "u_stu3",
+      "title": "材料审核结果通知",
+      "content": "你在《创业计划书打磨营》提交的材料状态为：rejected。",
+      "type": "submission_reviewed",
+      "read": true,
+      "createdAt": "2026-03-14T07:10:00Z"
+    },
+    {
+      "id": "noti_3",
+      "userId": "u_stu3",
+      "title": "材料审核结果通知",
+      "content": "你在《商业案例精英赛》提交的材料状态为：approved。",
+      "type": "submission_reviewed",
+      "read": false,
+      "createdAt": "2026-03-23T10:10:00Z"
+    },
+    {
+      "id": "noti_4",
+      "userId": "u_stu3",
+      "title": "材料审核结果通知",
+      "content": "你在《春季社区助老志愿服务》提交的材料状态为：rejected。",
+      "type": "submission_reviewed",
+      "read": false,
+      "createdAt": "2026-03-05T13:10:00Z"
+    },
+    {
+      "id": "noti_5",
+      "userId": "u_stu4",
+      "title": "材料审核结果通知",
+      "content": "你在《绿色校园环保行动》提交的材料状态为：rejected。",
+      "type": "submission_reviewed",
+      "read": false,
+      "createdAt": "2026-03-19T12:10:00Z"
+    },
+    {
+      "id": "noti_6",
+      "userId": "u_stu4",
+      "title": "材料审核结果通知",
+      "content": "你在《春季社区助老志愿服务》提交的材料状态为：rejected。",
+      "type": "submission_reviewed",
+      "read": false,
+      "createdAt": "2026-03-03T14:10:00Z"
+    },
+    {
+      "id": "noti_7",
+      "userId": "u_stu6",
+      "title": "材料审核结果通知",
+      "content": "你在《商业案例精英赛》提交的材料状态为：approved。",
+      "type": "submission_reviewed",
+      "read": true,
+      "createdAt": "2026-03-21T15:10:00Z"
+    },
+    {
+      "id": "noti_8",
+      "userId": "u_stu6",
+      "title": "材料审核结果通知",
+      "content": "你在《春季社区助老志愿服务》提交的材料状态为：approved。",
+      "type": "submission_reviewed",
+      "read": true,
+      "createdAt": "2026-03-04T13:10:00Z"
+    },
+    {
+      "id": "noti_9",
+      "userId": "u_stu6",
+      "title": "材料审核结果通知",
+      "content": "你在《人工智能应用公开课》提交的材料状态为：approved。",
+      "type": "submission_reviewed",
+      "read": false,
+      "createdAt": "2026-03-24T19:10:00Z"
+    },
+    {
+      "id": "noti_10",
+      "userId": "u_stu7",
+      "title": "材料审核结果通知",
+      "content": "你在《城市调研社会实践》提交的材料状态为：approved。",
+      "type": "submission_reviewed",
+      "read": true,
+      "createdAt": "2026-03-16T13:10:00Z"
+    },
+    {
+      "id": "noti_11",
+      "userId": "u_stu7",
+      "title": "材料审核结果通知",
+      "content": "你在《财税前沿名师讲坛》提交的材料状态为：rejected。",
+      "type": "submission_reviewed",
+      "read": false,
+      "createdAt": "2026-03-08T11:10:00Z"
+    },
+    {
+      "id": "noti_12",
+      "userId": "u_stu8",
+      "title": "材料审核结果通知",
+      "content": "你在《财税前沿名师讲坛》提交的材料状态为：approved。",
+      "type": "submission_reviewed",
+      "read": false,
+      "createdAt": "2026-03-09T13:10:00Z"
+    },
+    {
+      "id": "noti_13",
+      "userId": "u_stu8",
+      "title": "材料审核结果通知",
+      "content": "你在《城市调研社会实践》提交的材料状态为：approved。",
+      "type": "submission_reviewed",
+      "read": true,
+      "createdAt": "2026-03-15T22:10:00Z"
+    },
+    {
+      "id": "noti_14",
+      "userId": "u_stu9",
+      "title": "材料审核结果通知",
+      "content": "你在《财税前沿名师讲坛》提交的材料状态为：rejected。",
+      "type": "submission_reviewed",
+      "read": false,
+      "createdAt": "2026-03-10T07:10:00Z"
+    },
+    {
+      "id": "noti_15",
+      "userId": "u_stu9",
+      "title": "材料审核结果通知",
+      "content": "你在《跨境电商创新工坊》提交的材料状态为：rejected。",
+      "type": "submission_reviewed",
+      "read": true,
+      "createdAt": "2026-03-27T03:10:00Z"
+    },
+    {
+      "id": "noti_16",
+      "userId": "u_stu10",
+      "title": "材料审核结果通知",
+      "content": "你在《财税前沿名师讲坛》提交的材料状态为：approved。",
+      "type": "submission_reviewed",
+      "read": false,
+      "createdAt": "2026-03-09T14:10:00Z"
+    },
+    {
+      "id": "noti_17",
+      "userId": "u_stu1",
+      "title": "系统维护通知",
+      "content": "平台将于周末进行升级维护，请提前完成材料提交。",
+      "type": "system",
+      "read": false,
+      "createdAt": "2026-02-28T09:00:00Z"
+    },
+    {
+      "id": "noti_18",
+      "userId": "u_stu2",
+      "title": "系统维护通知",
+      "content": "平台将于周末进行升级维护，请提前完成材料提交。",
+      "type": "system",
+      "read": false,
+      "createdAt": "2026-03-08T09:00:00Z"
+    },
+    {
+      "id": "noti_19",
+      "userId": "u_stu3",
+      "title": "系统维护通知",
+      "content": "平台将于周末进行升级维护，请提前完成材料提交。",
+      "type": "system",
+      "read": false,
+      "createdAt": "2026-02-28T09:00:00Z"
+    },
+    {
+      "id": "noti_20",
+      "userId": "u_stu4",
+      "title": "系统维护通知",
+      "content": "平台将于周末进行升级维护，请提前完成材料提交。",
+      "type": "system",
+      "read": false,
+      "createdAt": "2026-03-01T09:00:00Z"
+    }
+  ]
 }
