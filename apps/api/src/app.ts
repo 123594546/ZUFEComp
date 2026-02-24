@@ -19,6 +19,12 @@ export const createApp = async () => {
   app.use(cors());
   app.use(express.json());
 
+  app.get('/', (_req, res) =>
+    res.json({
+      success: true,
+      message: 'ZUFEComp API is running. Use /api/health for health check.'
+    })
+  );
   app.get('/api/health', (_req, res) => res.json({ success: true }));
   app.use('/api/auth', authRoutes);
   app.use('/api/activities', activityRoutes);
@@ -26,6 +32,10 @@ export const createApp = async () => {
   app.use('/api', submissionRoutes);
   app.use('/api/admin', adminRoutes);
   app.use('/api/files', fileRoutes);
+
+  app.use((_req, res) => {
+    res.status(404).json({ success: false, message: 'Route not found' });
+  });
 
   return app;
 };
