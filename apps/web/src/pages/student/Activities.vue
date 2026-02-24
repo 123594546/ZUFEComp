@@ -1,43 +1,43 @@
 <template>
   <el-card>
     <el-form inline>
-      <el-form-item><el-input v-model="query.keyword" placeholder="搜索" /></el-form-item>
-      <el-form-item><el-input v-model="query.type" placeholder="类型" /></el-form-item>
+      <el-form-item><el-input v-model="query.keyword" :placeholder="t('activity.keyword')" /></el-form-item>
+      <el-form-item><el-input v-model="query.type" :placeholder="t('activity.type')" /></el-form-item>
       <el-form-item>
-        <el-select v-model="query.status" style="width: 130px" placeholder="状态">
-          <el-option label="全部状态" value="" />
-          <el-option label="草稿" value="draft" />
-          <el-option label="已发布" value="published" />
-          <el-option label="已关闭" value="closed" />
+        <el-select v-model="query.status" style="width: 130px" :placeholder="t('common.status')">
+          <el-option :label="t('activity.allStatus')" value="" />
+          <el-option :label="t('activity.draft')" value="draft" />
+          <el-option :label="t('activity.published')" value="published" />
+          <el-option :label="t('activity.closed')" value="closed" />
         </el-select>
       </el-form-item>
       <el-form-item>
         <el-select v-model="query.sortBy" style="width: 160px">
-          <el-option label="发布时间" value="createdAt" />
-          <el-option label="报名截止" value="signupDeadline" />
-          <el-option label="容量" value="capacity" />
+          <el-option :label="t('activity.createdAt')" value="createdAt" />
+          <el-option :label="t('activity.signupDeadline')" value="signupDeadline" />
+          <el-option :label="t('activity.capacity')" value="capacity" />
         </el-select>
       </el-form-item>
       <el-form-item>
         <el-select v-model="query.order" style="width: 120px">
-          <el-option label="降序" value="desc" />
-          <el-option label="升序" value="asc" />
+          <el-option :label="t('activity.desc')" value="desc" />
+          <el-option :label="t('activity.asc')" value="asc" />
         </el-select>
       </el-form-item>
-      <el-button @click="onSearch">查询</el-button>
+      <el-button @click="onSearch">{{ t('common.search') }}</el-button>
     </el-form>
 
-    <el-alert v-if="error" :title="error" type="error" show-icon style="margin-bottom: 12px" />
+    <el-alert v-if="error" :title="error" show-icon style="margin-bottom: 12px" type="error" />
 
-    <el-table :data="list" v-loading="loading">
-      <el-table-column prop="title" label="标题" />
-      <el-table-column prop="type" label="类型" />
-      <el-table-column label="标签">
-        <template #default="s"><el-tag v-for="t in s.row.tags" :key="t">{{ t }}</el-tag></template>
+    <el-table v-loading="loading" :data="list">
+      <el-table-column :label="t('activity.title')" prop="title" />
+      <el-table-column :label="t('activity.type')" prop="type" />
+      <el-table-column :label="t('activity.tags')">
+        <template #default="s"><el-tag v-for="tag in s.row.tags" :key="tag">{{ tag }}</el-tag></template>
       </el-table-column>
-      <el-table-column prop="status" label="状态" />
-      <el-table-column label="剩余"><template #default="s">{{ s.row.remaining }}</template></el-table-column>
-      <el-table-column><template #default="s"><el-button @click="$router.push('/app/activities/' + s.row.id)">详情</el-button></template></el-table-column>
+      <el-table-column :label="t('common.status')" prop="status" />
+      <el-table-column :label="t('activity.remaining')"><template #default="s">{{ s.row.remaining }}</template></el-table-column>
+      <el-table-column><template #default="s"><el-button @click="$router.push('/app/activities/' + s.row.id)">{{ t('common.details') }}</el-button></template></el-table-column>
     </el-table>
 
     <el-pagination
@@ -45,20 +45,22 @@
       v-model:page-size="query.pageSize"
       :total="total"
       layout="total, sizes, prev, pager, next"
+      style="margin-top: 12px"
       @current-change="load"
       @size-change="onSizeChange"
-      style="margin-top: 12px"
     />
 
-    <el-empty v-if="!list.length && !loading" description="暂无活动" />
+    <el-empty v-if="!list.length && !loading" :description="t('activity.empty')" />
   </el-card>
 </template>
 
 <script setup lang="ts">
 import { onMounted, reactive, ref } from 'vue';
 import { ElMessage } from 'element-plus';
+import { useI18n } from 'vue-i18n';
 import { http } from '../../api/http';
 
+const { t } = useI18n();
 const query = reactive({ keyword: '', type: '', status: '', sortBy: 'createdAt', order: 'desc', page: 1, pageSize: 10 });
 type ActivityListItem = {
   id: string;
@@ -84,17 +86,19 @@ const load = async () => {
   } catch (err) {
     list.value = [];
     total.value = 0;
-    error.value = '活动加载失败，请稍后重试';
-    ElMessage.error('活动加载失败，请稍后重试');
+    error.value = t('activity.loadFailed');
+    ElMessage.error(t('activity.loadFailed'));
     console.error(err);
   } finally {
     loading.value = false;
   }
 };
+
 const onSearch = () => {
   query.page = 1;
   load();
 };
+
 const onSizeChange = () => {
   query.page = 1;
   load();

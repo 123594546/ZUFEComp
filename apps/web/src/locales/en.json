@@ -1,0 +1,70 @@
+{
+  "layout": {
+    "student": "Student",
+    "admin": "Admin",
+    "dashboard": "Dashboard",
+    "activities": "Activities",
+    "myEnrollments": "My Enrollments",
+    "mySubmissions": "My Submissions",
+    "myPoints": "My Points",
+    "logout": "Logout",
+    "switchToEnglish": "English",
+    "switchToChinese": "中文",
+    "overview": "Overview",
+    "manageActivities": "Activities",
+    "reviewSubmissions": "Submissions",
+    "exportCenter": "Export Center",
+    "rolesCenter": "Roles",
+    "messageCenter": "Messages"
+  },
+  "common": {
+    "status": "Status",
+    "activity": "Activity",
+    "submit": "Submit",
+    "register": "Register",
+    "login": "Login",
+    "details": "Details",
+    "search": "Search"
+  },
+  "login": {
+    "studentId": "Student ID",
+    "password": "Password",
+    "failed": "Login failed"
+  },
+  "register": {
+    "name": "Name",
+    "grade": "Grade",
+    "college": "College",
+    "success": "Registration successful",
+    "failed": "Registration failed"
+  },
+  "activity": {
+    "keyword": "Search",
+    "type": "Type",
+    "allStatus": "All statuses",
+    "draft": "Draft",
+    "published": "Published",
+    "closed": "Closed",
+    "createdAt": "Created At",
+    "signupDeadline": "Signup Deadline",
+    "capacity": "Capacity",
+    "desc": "Desc",
+    "asc": "Asc",
+    "title": "Title",
+    "tags": "Tags",
+    "remaining": "Remaining",
+    "empty": "No activities",
+    "loadFailed": "Failed to load activities, please try again later",
+    "remainingQuota": "Remaining quota",
+    "countdown": "Signup countdown",
+    "expired": "Expired",
+    "enroll": "Enroll",
+    "cancelEnroll": "Cancel Enrollment",
+    "submitMaterial": "Submit Material",
+    "enrollSuccess": "Enrollment successful",
+    "cancelSuccess": "Canceled",
+    "submitSuccess": "Submission successful",
+    "failed": "Failed",
+    "frontendNote": "Submitted from web"
+  }
+}

@@ -2,18 +2,18 @@
   <el-container>
     <el-aside width="220px">
       <el-menu router>
-        <el-menu-item index="/app/dashboard">{{ t('dashboard') }}</el-menu-item>
-        <el-menu-item index="/app/activities">{{ t('activities') }}</el-menu-item>
-        <el-menu-item index="/app/me/enrollments">{{ t('myEnrollments') }}</el-menu-item>
-        <el-menu-item index="/app/me/submissions">{{ t('mySubmissions') }}</el-menu-item>
-        <el-menu-item index="/app/me/points">{{ t('myPoints') }}</el-menu-item>
+        <el-menu-item index="/app/dashboard">{{ t('layout.dashboard') }}</el-menu-item>
+        <el-menu-item index="/app/activities">{{ t('layout.activities') }}</el-menu-item>
+        <el-menu-item index="/app/me/enrollments">{{ t('layout.myEnrollments') }}</el-menu-item>
+        <el-menu-item index="/app/me/submissions">{{ t('layout.mySubmissions') }}</el-menu-item>
+        <el-menu-item index="/app/me/points">{{ t('layout.myPoints') }}</el-menu-item>
       </el-menu>
     </el-aside>
     <el-container>
       <el-header>
-        {{ t('student') }}
-        <el-button @click="locale.toggleLocale" size="small" style="margin-left: 8px">{{ t('switchLang') }}</el-button>
-        <el-button @click="logout" size="small">{{ t('logout') }}</el-button>
+        {{ t('layout.student') }}
+        <el-button @click="switchLanguage" size="small" style="margin-left: 8px">{{ switchLabel }}</el-button>
+        <el-button @click="logout" size="small">{{ t('layout.logout') }}</el-button>
       </el-header>
       <el-main><router-view /></el-main>
     </el-container>
@@ -21,14 +21,25 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue';
 import { useRouter } from 'vue-router';
+import { useI18n } from 'vue-i18n';
 import { useAuthStore } from '../stores/auth';
-import { useLocaleStore } from '../stores/locale';
-import { t } from '../i18n';
+import { useLocaleStore, type Locale } from '../stores/locale';
+import { setI18nLanguage } from '../i18n';
 
 const auth = useAuthStore();
-const locale = useLocaleStore();
+const localeStore = useLocaleStore();
 const router = useRouter();
+const { t } = useI18n();
+
+const switchLabel = computed(() => (localeStore.locale === 'zh' ? t('layout.switchToEnglish') : t('layout.switchToChinese')));
+
+const switchLanguage = async () => {
+  const nextLocale: Locale = localeStore.locale === 'zh' ? 'en' : 'zh';
+  await setI18nLanguage(nextLocale);
+  localeStore.setLocale(nextLocale);
+};
 
 const logout = () => {
   auth.logout();

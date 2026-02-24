@@ -1,43 +1,32 @@
-import { useLocaleStore } from './stores/locale';
+import { createI18n } from 'vue-i18n';
+import type { Locale } from './stores/locale';
 
-const dict = {
-  zh: {
-    student: '学生端',
-    admin: '管理端',
-    dashboard: '首页',
-    activities: '活动列表',
-    myEnrollments: '我的报名',
-    mySubmissions: '我的提交',
-    myPoints: '我的积分',
-    logout: '退出',
-    switchLang: '切换英文',
-    overview: '看板',
-    manageActivities: '活动管理',
-    reviewSubmissions: '材料审核',
-    exportCenter: '导出中心',
-    rolesCenter: '权限管理',
-    messageCenter: '消息中心',
-  },
-  en: {
-    student: 'Student',
-    admin: 'Admin',
-    dashboard: 'Dashboard',
-    activities: 'Activities',
-    myEnrollments: 'My Enrollments',
-    mySubmissions: 'My Submissions',
-    myPoints: 'My Points',
-    logout: 'Logout',
-    switchLang: '切换中文',
-    overview: 'Overview',
-    manageActivities: 'Activities',
-    reviewSubmissions: 'Reviews',
-    exportCenter: 'Export',
-    rolesCenter: 'Roles',
-    messageCenter: 'Messages',
-  },
+const loadedLocales = new Set<string>();
+
+export const i18n = createI18n({
+    locale: 'zh',
+  messages: {},
+});
+
+const localeModules = import.meta.glob('./locales/*.json');
+
+export const loadLocaleMessages = async (locale: Locale) => {
+  if (loadedLocales.has(locale)) {
+    return;
+  }
+
+  const loader = localeModules[`./locales/${locale}.json`];
+  if (!loader) {
+    throw new Error(`Locale ${locale} is not supported.`);
+  }
+
+  const messages = (await loader()) as { default: Record<string, unknown> };
+  i18n.global.setLocaleMessage(locale, messages.default);
+  loadedLocales.add(locale);
 };
 
-export const t = (key: keyof (typeof dict)['zh']) => {
-  const locale = useLocaleStore();
-  return dict[locale.locale][key];
+export const setI18nLanguage = async (locale: Locale) => {
+  await loadLocaleMessages(locale);
+  i18n.global.locale.value = locale;
+  document.documentElement.setAttribute('lang', locale);
 };
