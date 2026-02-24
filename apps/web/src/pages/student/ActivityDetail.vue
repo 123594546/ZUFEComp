@@ -5,8 +5,8 @@
     <el-tag>{{ detail.status }}</el-tag>
     <p>{{ t('activity.remainingQuota') }} {{ detail.remaining }}</p>
     <p>{{ t('activity.countdown') }}：{{ countdown }}</p>
-    <el-button type="primary" @click="enroll">{{ t('activity.enroll') }}</el-button>
-    <el-button @click="cancel">{{ t('activity.cancelEnroll') }}</el-button>
+    <el-button v-if="!isEnrolled" type="primary" :disabled="!canEnroll" @click="enroll">{{ t('activity.enroll') }}</el-button>
+    <el-button v-else @click="cancel">{{ t('activity.cancelEnroll') }}</el-button>
     <el-upload :http-request="upload" :show-file-list="false"><el-button>{{ t('activity.submitMaterial') }}</el-button></el-upload>
   </el-card>
 </template>
@@ -26,6 +26,7 @@ type ActivityDetail = {
   status: string;
   remaining: number;
   signupDeadline: string;
+  myEnrollmentStatus: 'enrolled' | 'cancelled' | null;
 };
 
 const detail = ref<ActivityDetail>();
@@ -48,6 +49,14 @@ const countdown = computed(() => {
   return `${days}天${String(hours).padStart(2, '0')}时${String(minutes).padStart(2, '0')}分${String(seconds).padStart(2, '0')}秒`;
 });
 
+const isEnrolled = computed(() => detail.value?.myEnrollmentStatus === 'enrolled');
+const canEnroll = computed(() => {
+  if (!detail.value) return false;
+  if (detail.value.status !== 'published') return false;
+  if (new Date(detail.value.signupDeadline).getTime() <= now.value) return false;
+  return detail.value.remaining > 0;
+});
+
 const load = async () => {
   detail.value = (await http.get(`/activities/${route.params.id}`)).data.data;
 };
@@ -64,9 +73,14 @@ const enroll = async () => {
 };
 
 const cancel = async () => {
-  await http.delete(`/activities/${route.params.id}/enroll`);
-  ElMessage.success(t('activity.cancelSuccess'));
-  load();
+  try {
+    await http.delete(`/activities/${route.params.id}/enroll`);
+    ElMessage.success(t('activity.cancelSuccess'));
+    load();
+  } catch (e: unknown) {
+    const message = (e as { response?: { data?: { message?: string } } })?.response?.data?.message;
+    ElMessage.error(message || t('activity.failed'));
+  }
 };
 
 const upload = async (opt: { file: Blob }) => {
