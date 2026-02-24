@@ -24,7 +24,19 @@
     "register": "Register",
     "login": "Login",
     "details": "Details",
-    "search": "Search"
+    "search": "Search",
+    "file": "File",
+    "time": "Time",
+    "actions": "Actions",
+    "save": "Save",
+    "edit": "Edit",
+    "delete": "Delete",
+    "all": "All",
+    "close": "Close"
+  },
+  "result": {
+    "forbidden": "No permission",
+    "notFound": "Page not found"
   },
   "login": {
     "studentId": "Student ID",
@@ -37,6 +49,15 @@
     "college": "College",
     "success": "Registration successful",
     "failed": "Registration failed"
+  },
+  "dashboard": {
+    "myEnrollments": "My Enrollments",
+    "mySubmissions": "My Submissions",
+    "pendingReviews": "Pending Reviews",
+    "myPoints": "My Points",
+    "recommendations": "AI Recommendations",
+    "emptyRecommendations": "No recommendations",
+    "matchScore": "Match Score"
   },
   "activity": {
     "keyword": "Search",
@@ -65,6 +86,98 @@
     "cancelSuccess": "Canceled",
     "submitSuccess": "Submission successful",
     "failed": "Failed",
-    "frontendNote": "Submitted from web"
+    "frontendNote": "Submitted from web",
+    "searchPlaceholder": "Search by title/description",
+    "create": "Create Activity",
+    "manage": "Activity Editor",
+    "description": "Description",
+    "location": "Location",
+    "timeRange": "Time Range",
+    "statusUpdated": "Status updated",
+    "saved": "Saved successfully",
+    "deleted": "Deleted",
+    "deleteConfirmTitle": "Delete Confirmation",
+    "deleteConfirmMessage": "Delete related enrollments and submissions? Confirm to cascade delete.",
+    "deleteAll": "Delete all",
+    "deleteOnly": "Delete activity only",
+    "limit": "Capacity",
+    "tagsSchool": "School-level",
+    "tagsCollege": "College-level",
+    "tagsPractice": "Practice",
+    "tagsCompetition": "Competition"
+  },
+  "submission": {
+    "status": "Status",
+    "aiResult": "AI Review",
+    "rejectReason": "Reject Reason",
+    "download": "Download",
+    "pending": "Pending",
+    "approved": "Approved",
+    "rejected": "Rejected",
+    "pass": "Pass"
+  },
+  "points": {
+    "title": "My Points",
+    "current": "Current Points",
+    "empty": "No points records",
+    "source": "Source",
+    "change": "Change",
+    "type": "Type"
+  },
+  "admin": {
+    "overview": {
+      "totalActivities": "Total Activities",
+      "totalEnrollments": "Total Enrollments",
+      "pendingReviews": "Pending Reviews",
+      "typeDist": "Enrollment by Activity Type",
+      "collegeDist": "Participation by College",
+      "trend": "Enrollment Trend"
+    },
+    "roles": {
+      "name": "Name",
+      "account": "Account",
+      "role": "Role",
+      "permissions": "Manageable Activity Types",
+      "superAdmin": "Super Admin",
+      "activityAdmin": "Activity Admin",
+      "reviewer": "Reviewer",
+      "saved": "Saved",
+      "volunteer": "Volunteer Service",
+      "competition": "Academic Competition",
+      "lecture": "Lecture & Forum",
+      "innovation": "Innovation & Entrepreneurship"
+    },
+    "submissions": {
+      "studentFilter": "Filter by student ID",
+      "activityFilter": "Filter by activity ID",
+      "reviewStatus": "Review status",
+      "student": "Student",
+      "aiScore": "AI Score",
+      "ocr": "OCR Text",
+      "approve": "Approve",
+      "reject": "Reject",
+      "batchNote": "Batch note",
+      "batchApprove": "Batch approve",
+      "batchReject": "Batch reject",
+      "reviewPrompt": "Please enter review note",
+      "reviewAction": "Review",
+      "approveDefault": "Approved",
+      "rejectDefault": "Incomplete materials",
+      "batchApproveDefault": "Batch approved",
+      "batchRejectDefault": "Batch rejected"
+    },
+    "export": {
+      "activityId": "Activity ID (optional)",
+      "submitStatus": "Submission status",
+      "exportEnrollments": "Export enrollments",
+      "exportSubmissions": "Export submission reviews"
+    },
+    "messages": {
+      "title": "Title",
+      "content": "Content",
+      "read": "Read",
+      "unread": "Unread",
+      "markRead": "Mark as read"
+    }
   }
 }

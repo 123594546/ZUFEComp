@@ -24,7 +24,19 @@
     "register": "注册",
     "login": "登录",
     "details": "详情",
-    "search": "查询"
+    "search": "查询",
+    "file": "文件",
+    "time": "时间",
+    "actions": "操作",
+    "save": "保存",
+    "edit": "编辑",
+    "delete": "删除",
+    "all": "全部",
+    "close": "关闭"
+  },
+  "result": {
+    "forbidden": "无权限",
+    "notFound": "页面不存在"
   },
   "login": {
     "studentId": "学号",
@@ -37,6 +49,15 @@
     "college": "学院",
     "success": "注册成功",
     "failed": "注册失败"
+  },
+  "dashboard": {
+    "myEnrollments": "我的报名",
+    "mySubmissions": "我的提交",
+    "pendingReviews": "待审核",
+    "myPoints": "我的积分",
+    "recommendations": "AI 活动推荐",
+    "emptyRecommendations": "暂无推荐",
+    "matchScore": "匹配分"
   },
   "activity": {
     "keyword": "搜索",
@@ -65,6 +86,98 @@
     "cancelSuccess": "已取消",
     "submitSuccess": "提交成功",
     "failed": "失败",
-    "frontendNote": "前端提交"
+    "frontendNote": "前端提交",
+    "searchPlaceholder": "按标题/描述搜索",
+    "create": "新增活动",
+    "manage": "活动维护",
+    "description": "活动描述",
+    "location": "地点",
+    "timeRange": "时间范围",
+    "statusUpdated": "状态已更新",
+    "saved": "保存成功",
+    "deleted": "已删除",
+    "deleteConfirmTitle": "删除确认",
+    "deleteConfirmMessage": "是否删除关联报名和材料数据？选择“确定”将级联删除。",
+    "deleteAll": "删除全部",
+    "deleteOnly": "仅删活动",
+    "limit": "人数上限",
+    "tagsSchool": "校级",
+    "tagsCollege": "院级",
+    "tagsPractice": "实践",
+    "tagsCompetition": "竞赛"
+  },
+  "submission": {
+    "status": "状态",
+    "aiResult": "AI 初审",
+    "rejectReason": "驳回原因",
+    "download": "下载",
+    "pending": "待审核",
+    "approved": "通过",
+    "rejected": "驳回",
+    "pass": "通过"
+  },
+  "points": {
+    "title": "我的积分",
+    "current": "当前积分",
+    "empty": "暂无积分记录",
+    "source": "来源",
+    "change": "变更",
+    "type": "类型"
+  },
+  "admin": {
+    "overview": {
+      "totalActivities": "总活动",
+      "totalEnrollments": "总报名",
+      "pendingReviews": "待审核",
+      "typeDist": "活动类型报名分布",
+      "collegeDist": "学院参与占比",
+      "trend": "报名趋势"
+    },
+    "roles": {
+      "name": "姓名",
+      "account": "账号",
+      "role": "角色",
+      "permissions": "可管活动类型",
+      "superAdmin": "超级管理员",
+      "activityAdmin": "活动管理员",
+      "reviewer": "审核员",
+      "saved": "已保存",
+      "volunteer": "志愿服务",
+      "competition": "学科竞赛",
+      "lecture": "讲座论坛",
+      "innovation": "创新创业"
+    },
+    "submissions": {
+      "studentFilter": "学号筛选",
+      "activityFilter": "活动ID筛选",
+      "reviewStatus": "审核状态",
+      "student": "学生",
+      "aiScore": "AI评分",
+      "ocr": "OCR提取",
+      "approve": "通过",
+      "reject": "驳回",
+      "batchNote": "批量备注",
+      "batchApprove": "批量通过",
+      "batchReject": "批量驳回",
+      "reviewPrompt": "请输入审核备注",
+      "reviewAction": "审核操作",
+      "approveDefault": "审核通过",
+      "rejectDefault": "材料不完整",
+      "batchApproveDefault": "批量审核通过",
+      "batchRejectDefault": "批量审核驳回"
+    },
+    "export": {
+      "activityId": "活动ID(可选)",
+      "submitStatus": "提交状态",
+      "exportEnrollments": "导出报名名单",
+      "exportSubmissions": "导出材料审核"
+    },
+    "messages": {
+      "title": "标题",
+      "content": "内容",
+      "read": "已读",
+      "unread": "未读",
+      "markRead": "标记已读"
+    }
   }
 }
