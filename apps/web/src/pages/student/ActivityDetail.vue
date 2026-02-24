@@ -37,7 +37,15 @@ setInterval(() => {
 const countdown = computed(() => {
   if (!detail.value) return '';
   const diff = new Date(detail.value.signupDeadline).getTime() - now.value;
-  return diff > 0 ? `${Math.floor(diff / 1000)}s` : t('activity.expired');
+  if (diff <= 0) return t('activity.expired');
+
+  const totalSeconds = Math.floor(diff / 1000);
+  const days = Math.floor(totalSeconds / (24 * 60 * 60));
+  const hours = Math.floor((totalSeconds % (24 * 60 * 60)) / (60 * 60));
+  const minutes = Math.floor((totalSeconds % (60 * 60)) / 60);
+  const seconds = totalSeconds % 60;
+
+  return `${days}天${String(hours).padStart(2, '0')}时${String(minutes).padStart(2, '0')}分${String(seconds).padStart(2, '0')}秒`;
 });
 
 const load = async () => {
