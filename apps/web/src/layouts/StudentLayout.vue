@@ -6,6 +6,7 @@
         <el-menu-item index="/app/activities">{{ t('activities') }}</el-menu-item>
         <el-menu-item index="/app/me/enrollments">{{ t('myEnrollments') }}</el-menu-item>
         <el-menu-item index="/app/me/submissions">{{ t('mySubmissions') }}</el-menu-item>
+        <el-menu-item index="/app/me/points">{{ t('myPoints') }}</el-menu-item>
       </el-menu>
     </el-aside>
     <el-container>

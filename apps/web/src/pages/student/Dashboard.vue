@@ -29,18 +29,21 @@ const cards = ref([
   { label: '我的报名', value: 0 },
   { label: '我的提交', value: 0 },
   { label: '待审核', value: 0 },
+  { label: '我的积分', value: 0 },
 ]);
 const recommendations = ref<any[]>([]);
 
 onMounted(async () => {
-  const [e, s, r] = await Promise.all([
+  const [e, s, r, p] = await Promise.all([
     http.get('/me/enrollments'),
     http.get('/me/submissions'),
     http.get('/me/recommendations'),
+    http.get('/me/points'),
   ]);
   cards.value[0].value = e.data.data.length;
   cards.value[1].value = s.data.data.length;
   cards.value[2].value = s.data.data.filter((x: { status: string }) => x.status === 'pending').length;
+  cards.value[3].value = p.data.data.points;
   recommendations.value = r.data.data;
 });
 </script>

@@ -2,6 +2,7 @@ import { Router } from 'express';
 import { db } from '../db.js';
 import { auth, requireRole } from '../middleware/auth.js';
 import { now } from '../utils/helpers.js';
+import { awardPointsOnce } from '../utils/points.js';
 
 const router = Router();
 router.use(auth, requireRole('admin'));
@@ -24,8 +25,22 @@ router.patch('/submissions/:id/review', async (req, res) => {
   s.reviewNote = req.body.reviewNote || '';
   s.reviewerId = req.user!.id;
   s.updatedAt = now();
+  if (s.status === 'approved') {
+    const activity = db.data.activities.find((item) => item.id === s.activityId);
+    awardPointsOnce({ userId: s.userId, type: 'submissionApproved', refId: s.id, points: 20, note: `材料通过：${activity?.title || '活动材料'}` });
+  }
   await db.write();
   res.json({ success: true, data: s });
+});
+
+router.get('/points/ranking', async (_req, res) => {
+  await db.read();
+  const data = db.data.users
+    .filter((item) => item.role === 'student')
+    .map((item) => ({ id: item.id, studentId: item.studentId, name: item.name, college: item.college, grade: item.grade, points: item.points || 0 }))
+    .sort((a, b) => b.points - a.points)
+    .slice(0, 50);
+  res.json({ success: true, data });
 });
 
 router.get('/stats', async (_req, res) => {
