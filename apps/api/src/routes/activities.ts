@@ -9,11 +9,17 @@ router.use(auth);
 
 router.get('/', async (req, res) => {
   await db.read();
-  const { keyword = '', type = '', tag = '', status = '', page = '1', pageSize = '10' } = req.query as Record<string, string>;
+  const { keyword = '', type = '', tag = '', status = '', sortBy = 'createdAt', order = 'desc', page = '1', pageSize = '10' } = req.query as Record<string, string>;
   let list = db.data.activities.filter((a) => a.title.includes(keyword) || a.description.includes(keyword));
   if (type) list = list.filter((a) => a.type === type);
   if (tag) list = list.filter((a) => a.tags.includes(tag));
   if (status) list = list.filter((a) => a.status === status);
+  list = list.sort((a, b) => {
+    const asc = order === 'asc' ? 1 : -1;
+    if (sortBy === 'signupDeadline') return (new Date(a.signupDeadline).getTime() - new Date(b.signupDeadline).getTime()) * asc;
+    if (sortBy === 'capacity') return (a.capacity - b.capacity) * asc;
+    return (new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime()) * asc;
+  });
   const p = Number(page), ps = Number(pageSize);
   const data = list.slice((p - 1) * ps, p * ps).map((a) => ({ ...a, remaining: calcRemaining(a.id, db.data.enrollments, a.capacity) }));
   res.json({ success: true, data, meta: { total: list.length, page: p, pageSize: ps } });
