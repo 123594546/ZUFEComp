@@ -48,6 +48,11 @@ export interface Submission {
   status: 'pending' | 'approved' | 'rejected';
   reviewerId?: string;
   reviewNote?: string;
+  aiReview?: {
+    score: number;
+    result: 'pass' | 'warn';
+    reasons: string[];
+  };
   createdAt: string;
   updatedAt: string;
 }
